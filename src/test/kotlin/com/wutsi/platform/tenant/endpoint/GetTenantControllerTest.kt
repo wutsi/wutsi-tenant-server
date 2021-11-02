@@ -9,7 +9,6 @@ import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class GetTenantControllerTest : AbstractSecuredController() {
@@ -42,10 +41,10 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(2, tenant.logos.size)
 
         assertEquals("PICTORIAL", tenant.logos[0].type)
-        assertTrue(tenant.logos[0].url.endsWith("/static/tenant/1/logos/pictorial.png"))
+        assertEquals("http://localhost:0/static/tenants/1/logos/pictorial.png", tenant.logos[0].url)
 
         assertEquals("WORDMARK", tenant.logos[1].type)
-        assertTrue(tenant.logos[1].url.endsWith("/static/tenant/1/logos/wordmark.png"))
+        assertEquals("http://localhost:0/static/tenants/1/logos/wordmark.png", tenant.logos[1].url)
     }
 
     @Test
