@@ -1,0 +1,102 @@
+openapi: "3.0.0"
+info:
+  title: "Wutsi Tenant API"
+  description: |
+    API that provide information about tennants
+  version: "1.0.0"
+
+servers:
+  - url: https://wutsi-tenant-server-test.herokuapp.com
+    description: Sandbox
+  - url: https://wutsi-tenant-server-prod.herokuapp.com
+    description: Production
+
+paths:
+  /v1/tenants/{id}:
+    get:
+      operationId: "get-tenant"
+      description: |
+        Return the information of a tennan
+      parameters:
+        - in: path
+          name: id
+          description: ID of the Tenant
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTenantResponse'
+      tags:
+        - Tenant
+      security:
+        - api_key: [ 'tenant-read' ]
+
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      in: header
+      name: Authorization
+
+  schemas:
+    Logo:
+      type: object
+      properties:
+        type:
+          description: See https://www.ebaqdesign.com/blog/types-of-logos
+          type: string
+          enum:
+            - EMBLEM
+            - PICTORIAL
+            - WORDMARK
+            - LETTERMARK
+            - ABSTRACT
+        url:
+          type: string
+          description: URL of the logo
+
+    Tenant:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Unique ID of the tenant
+        name:
+          type: string
+          description: Name of the tenant
+        domainName:
+          type: string
+          description: Tenant domain name
+        currency:
+          type: string
+          description: Currency of this tenant
+        countries:
+          type: array
+          description: List of countries supported by this tenant.
+          items:
+            type: string
+        languages:
+          type: array
+          description: List of languages supported by this tenant.
+          items:
+            type: string
+        logos:
+          description: List of logos of the tenant
+          type: array
+          items:
+            $ref: "#/components/schemas/Logo"
+
+    GetTenantResponse:
+      type: object
+      properties:
+        tenant:
+          type: object
+          $ref: "#/components/schemas/Tenant"
+
