@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service
 class GetTenantDelegate(private val service: TenantService) {
     fun invoke(id: Long): GetTenantResponse =
         GetTenantResponse(
-            tenant = service.all().find { it.id == id }
+            tenant = service.all().find { it.id == id }?.toTenant()
                 ?: throw NotFoundException(
                     error = Error(
                         code = ErrorURN.TENANT_NOT_FOUND.urn,
