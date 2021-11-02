@@ -46,16 +46,10 @@ wutsi:
   client-id: wutsi-tenant
   application:
     name: wutsi-tenant
-    server-url: http://localhost:${server.port}
+    asset-url: http://localhost:${server.port}
   platform:
     security:
       type: jwt
-    #    cache:
-    #      name: ${wutsi.application.name}
-    #      type: none
-    #    stream:
-    #      name: ${wutsi.application.name}
-    #      type: local
     tracing:
       client-id: ${wutsi.application.name}
       device-id-provider:
@@ -73,6 +67,6 @@ wutsi:
         - fr
       logos:
         - type: PICTORIAL
-          url: "${wutsi.application.server-url}/static/tenant/1/logos/pictorial.png"
+          url: "${wutsi.application.asset-url}/tenants/1/logos/pictorial.png"
         - type: WORDMARK
-          url: "${wutsi.application.server-url}/static/tenant/1/logos/wordmark.png"
+          url: "${wutsi.application.asset-url}/tenants/1/logos/wordmark.png"

@@ -13,18 +13,7 @@ spring:
 wutsi:
   client-id: wutsi-tenant
   application:
-    server-url: https://wutsi-tenant-server-prod.herokuapp.com:${server.port}
+    asset-url: https://wutsi-tenant-asset-prod.s3.amazonaws.com
   platform:
     security:
       type: jwt
-#    cache:
-#      type: memcached
-#      memcached:
-#        username: ${MEMCACHIER_USERNAME}
-#        password: ${MEMCACHIER_PASSWORD}
-#        servers: ${MEMCACHIER_SERVERS}
-#    stream:
-#      type: rabbitmq
-#      rabbitmq:
-#        url: ${CLOUDAMQP_URL}
-
