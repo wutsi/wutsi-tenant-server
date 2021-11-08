@@ -11,9 +11,10 @@ import org.springframework.stereotype.Service
 
 @Service
 class GetTenantDelegate(private val service: TenantService) {
-    fun invoke(id: Long): GetTenantResponse =
-        GetTenantResponse(
-            tenant = service.all().find { it.id == id }?.toTenant()
+    fun invoke(id: Long): GetTenantResponse {
+        val carriers = service.mobileCarriers().map { it.code to it }.toMap()
+        return GetTenantResponse(
+            tenant = service.tenants().find { it.id == id }?.toTenant(carriers)
                 ?: throw NotFoundException(
                     error = Error(
                         code = ErrorURN.TENANT_NOT_FOUND.urn,
@@ -25,4 +26,5 @@ class GetTenantDelegate(private val service: TenantService) {
                     )
                 )
         )
+    }
 }

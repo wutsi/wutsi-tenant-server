@@ -61,6 +61,45 @@ components:
           type: string
           description: URL of the logo
 
+    PhonePrefix:
+      type: object
+      properties:
+        country:
+          type: string
+          description: Country code
+        prefixes:
+          type: array
+          items:
+            type: string
+          description: |
+            List of phone prefixed in the format `+<country-code><prefix>`. Ex: `+23799` or `+237950`
+
+    MobileCarrier:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Mobile carrier unique code
+        name:
+          type: string
+          description: carrier display name
+        countries:
+          type: array
+          description: List of countries covered by this carrier.
+          items:
+            type: string
+        logos:
+          description: List of logos of the carrier
+          type: array
+          items:
+            $ref: "#/components/schemas/Logo"
+        phonePrefixes:
+          description: List of phone prefixes by country
+          type: array
+          items:
+            $ref: "#/components/schemas/PhonePrefix"
+
+
     Tenant:
       type: object
       properties:
@@ -92,6 +131,11 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Logo"
+        mobileCarriers:
+          description: List of phone carriers of the tenant
+          type: array
+          items:
+            $ref: "#/components/schemas/MobileCarrier"
 
     GetTenantResponse:
       type: object

@@ -45,6 +45,33 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals("WORDMARK", tenant.logos[1].type)
         assertEquals("http://localhost:0/static/tenants/1/logos/wordmark.png", tenant.logos[1].url)
+
+        val carriers = response.body.tenant.mobileCarriers
+        assertEquals(2, carriers.size)
+
+        assertEquals("mtn", carriers[0].code)
+        assertEquals("MTN", carriers[0].name)
+        assertEquals(listOf("CM"), carriers[0].countries)
+
+        assertEquals(1, carriers[0].logos.size)
+        assertEquals("PICTORIAL", carriers[0].logos[0].type)
+        assertEquals("http://localhost:0/static/mobile-carriers/mtn/logos/pictorial.png", carriers[0].logos[0].url)
+
+        assertEquals(1, carriers[0].phonePrefixes.size)
+        assertEquals("CM", carriers[0].phonePrefixes[0].country)
+        assertEquals(listOf("+237745", "+237746", "+237747", "+237748", "+237749", "+23775", "+23777"), carriers[0].phonePrefixes[0].prefixes)
+
+        assertEquals("orange", carriers[1].code)
+        assertEquals("Orange", carriers[1].name)
+        assertEquals(listOf("CM"), carriers[1].countries)
+
+        assertEquals(1, carriers[1].logos.size)
+        assertEquals("PICTORIAL", carriers[1].logos[0].type)
+        assertEquals("http://localhost:0/static/mobile-carriers/orange/logos/pictorial.png", carriers[1].logos[0].url)
+
+        assertEquals(1, carriers[1].phonePrefixes.size)
+        assertEquals("CM", carriers[1].phonePrefixes[0].country)
+        assertEquals(listOf("+237940", "+237941", "+237942", "+237943", "+237944", "+23796", "+23799"), carriers[1].phonePrefixes[0].prefixes)
     }
 
     @Test

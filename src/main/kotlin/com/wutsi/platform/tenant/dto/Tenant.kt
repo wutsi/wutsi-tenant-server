@@ -11,5 +11,6 @@ public data class Tenant(
     public val currency: String = "",
     public val countries: List<String> = emptyList(),
     public val languages: List<String> = emptyList(),
-    public val logos: List<Logo> = emptyList()
+    public val logos: List<Logo> = emptyList(),
+    public val mobileCarriers: List<MobileCarrier> = emptyList()
 )

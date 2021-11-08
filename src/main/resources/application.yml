@@ -70,8 +70,46 @@ wutsi:
       languages:
         - en
         - fr
+      mobile-carriers:
+        - mtn
+        - orange
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/tenants/1/logos/pictorial.png"
         - type: WORDMARK
           url: "${wutsi.application.asset-url}/tenants/1/logos/wordmark.png"
+
+  mobile-carriers:
+    - code: mtn
+      name: MTN
+      countries:
+        - CM
+      phone-prefixes:
+        CM:
+          - "+237745"
+          - "+237746"
+          - "+237747"
+          - "+237748"
+          - "+237749"
+          - "+23775"
+          - "+23777"
+      logos:
+        - type: PICTORIAL
+          url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/pictorial.png"
+
+    - code: orange
+      name: Orange
+      countries:
+        - CM
+      phone-prefixes:
+        CM:
+          - "+237940"
+          - "+237941"
+          - "+237942"
+          - "+237943"
+          - "+237944"
+          - "+23796"
+          - "+23799"
+      logos:
+        - type: PICTORIAL
+          url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
