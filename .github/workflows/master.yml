@@ -71,7 +71,7 @@ jobs:
           sleep 90
           curl -sSf https://${HEROKU_APP}.herokuapp.com/actuator/health >> /dev/null
 
-      - name: S3-Deploy-Test
+      - name: S3-Deploy-Prod
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
