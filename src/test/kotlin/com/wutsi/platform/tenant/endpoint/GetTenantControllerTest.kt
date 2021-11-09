@@ -53,9 +53,11 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("MTN", carriers[0].name)
         assertEquals(listOf("CM"), carriers[0].countries)
 
-        assertEquals(1, carriers[0].logos.size)
+        assertEquals(2, carriers[0].logos.size)
         assertEquals("PICTORIAL", carriers[0].logos[0].type)
         assertEquals("http://localhost:0/static/mobile-carriers/mtn/logos/pictorial.png", carriers[0].logos[0].url)
+        assertEquals("WORDMARK", carriers[0].logos[1].type)
+        assertEquals("http://localhost:0/static/mobile-carriers/mtn/logos/wordmark.png", carriers[0].logos[1].url)
 
         assertEquals(1, carriers[0].phonePrefixes.size)
         assertEquals("CM", carriers[0].phonePrefixes[0].country)
@@ -65,9 +67,11 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("Orange", carriers[1].name)
         assertEquals(listOf("CM"), carriers[1].countries)
 
-        assertEquals(1, carriers[1].logos.size)
+        assertEquals(2, carriers[1].logos.size)
         assertEquals("PICTORIAL", carriers[1].logos[0].type)
         assertEquals("http://localhost:0/static/mobile-carriers/orange/logos/pictorial.png", carriers[1].logos[0].url)
+        assertEquals("WORDMARK", carriers[1].logos[1].type)
+        assertEquals("http://localhost:0/static/mobile-carriers/orange/logos/wordmark.png", carriers[1].logos[1].url)
 
         assertEquals(1, carriers[1].phonePrefixes.size)
         assertEquals("CM", carriers[1].phonePrefixes[0].country)

@@ -91,6 +91,8 @@ wutsi:
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/pictorial.png"
+        - type: WORDMARK
+          url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/wordmark.png"
 
     - code: orange
       name: Orange
@@ -108,3 +110,5 @@ wutsi:
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
+        - type: WORDMARK
+          url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/wordmark.png"
