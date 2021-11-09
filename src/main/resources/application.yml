@@ -61,12 +61,7 @@ wutsi:
       domain-name: www.wutsi.com
       currency: XAF
       countries:
-        - CA
         - CM
-        - DE
-        - FR
-        - GB
-        - US
       languages:
         - en
         - fr

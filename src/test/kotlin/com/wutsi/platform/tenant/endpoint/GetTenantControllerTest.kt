@@ -36,7 +36,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("Wutsi", tenant.name)
         assertEquals("www.wutsi.com", tenant.domainName)
         assertEquals("XAF", tenant.currency)
-        assertEquals(listOf("CA", "CM", "DE", "FR", "GB", "US"), tenant.countries)
+        assertEquals(listOf("CM"), tenant.countries)
         assertEquals(listOf("en", "fr"), tenant.languages)
         assertEquals(2, tenant.logos.size)
 
