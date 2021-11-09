@@ -112,4 +112,3 @@ wutsi:
           url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
         - type: WORDMARK
           url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/wordmark.png"
-                 /mobile-carriers/orange/pictorial.png
