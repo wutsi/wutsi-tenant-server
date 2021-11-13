@@ -116,6 +116,9 @@ components:
         currency:
           type: string
           description: Currency of this tenant
+        numberFormat:
+          type: string
+          description: Number format
         countries:
           type: array
           description: List of countries supported by this tenant.

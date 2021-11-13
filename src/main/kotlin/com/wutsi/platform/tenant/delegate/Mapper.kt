@@ -15,6 +15,7 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     name = this.name,
     countries = this.countries,
     languages = this.languages,
+    numberFormat = this.numberFormat,
     logos = this.logos.map { it.toLogo() },
     mobileCarriers = this.mobileCarriers.map {
         if (carriers.containsKey(it))
