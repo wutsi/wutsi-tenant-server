@@ -118,7 +118,10 @@ components:
           description: Currency of this tenant
         numberFormat:
           type: string
-          description: Number format
+          description: Format to apply for numeric values
+        monetaryFormat:
+          type: string
+          description: Format to apply to monetary values
         countries:
           type: array
           description: List of countries supported by this tenant.

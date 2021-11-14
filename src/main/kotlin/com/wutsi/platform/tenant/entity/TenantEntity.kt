@@ -6,6 +6,7 @@ public data class TenantEntity(
     public var domainName: String = "",
     public var currency: String = "",
     public var numberFormat: String = "",
+    public var monetaryFormat: String = "",
     public var countries: List<String> = emptyList(),
     public var languages: List<String> = emptyList(),
     public var logos: List<LogoEntity> = emptyList(),

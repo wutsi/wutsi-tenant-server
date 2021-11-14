@@ -61,6 +61,7 @@ wutsi:
       domain-name: www.wutsi.com
       currency: XAF
       number-format: "#,###,##0"
+      monetary-format: "#,###,##0 XAF"
       countries:
         - CM
       languages:
