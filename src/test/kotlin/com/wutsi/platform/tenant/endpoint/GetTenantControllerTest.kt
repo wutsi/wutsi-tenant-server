@@ -38,7 +38,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
         assertEquals("#,###,##0 XAF", tenant.monetaryFormat)
-        assertEquals(listOf("CM"), tenant.countries)
+        assertEquals(listOf("CM", "GB"), tenant.countries)
         assertEquals(listOf("en", "fr"), tenant.languages)
         assertEquals(2, tenant.logos.size)
 

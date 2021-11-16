@@ -64,6 +64,7 @@ wutsi:
       monetary-format: "#,###,##0 XAF"
       countries:
         - CM
+        - GB
       languages:
         - en
         - fr
