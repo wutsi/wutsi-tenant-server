@@ -63,7 +63,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(1, carriers[0].phonePrefixes.size)
         assertEquals("CM", carriers[0].phonePrefixes[0].country)
-        assertEquals(listOf("+237745", "+237746", "+237747", "+237748", "+237749", "+23775", "+23777"), carriers[0].phonePrefixes[0].prefixes)
+        assertEquals(listOf("+23767", "+237650", "+237651", "+237652", "+237653", "+237654"), carriers[0].phonePrefixes[0].prefixes)
 
         assertEquals("orange", carriers[1].code)
         assertEquals("Orange", carriers[1].name)
@@ -77,7 +77,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(1, carriers[1].phonePrefixes.size)
         assertEquals("CM", carriers[1].phonePrefixes[0].country)
-        assertEquals(listOf("+237940", "+237941", "+237942", "+237943", "+237944", "+23796", "+23799"), carriers[1].phonePrefixes[0].prefixes)
+        assertEquals(listOf("+23769", "+237655", "+237656", "+237657", "+237658", "+237659"), carriers[1].phonePrefixes[0].prefixes)
     }
 
     @Test

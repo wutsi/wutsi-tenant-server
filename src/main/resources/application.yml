@@ -83,13 +83,12 @@ wutsi:
         - CM
       phone-prefixes:
         CM:
-          - "+237745"
-          - "+237746"
-          - "+237747"
-          - "+237748"
-          - "+237749"
-          - "+23775"
-          - "+23777"
+          - "+23767"
+          - "+237650"
+          - "+237651"
+          - "+237652"
+          - "+237653"
+          - "+237654"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/pictorial.png"
@@ -102,13 +101,12 @@ wutsi:
         - CM
       phone-prefixes:
         CM:
-          - "+237940"
-          - "+237941"
-          - "+237942"
-          - "+237943"
-          - "+237944"
-          - "+23796"
-          - "+23799"
+          - "+23769"
+          - "+237655"
+          - "+237656"
+          - "+237657"
+          - "+237658"
+          - "+237659"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
