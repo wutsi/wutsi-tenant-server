@@ -67,7 +67,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals("orange", carriers[1].code)
         assertEquals("Orange", carriers[1].name)
-        assertEquals(listOf("CM"), carriers[1].countries)
+        assertEquals(listOf("CM", "GB"), carriers[1].countries)
 
         assertEquals(2, carriers[1].logos.size)
         assertEquals("PICTORIAL", carriers[1].logos[0].type)
@@ -75,9 +75,11 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("WORDMARK", carriers[1].logos[1].type)
         assertEquals("http://localhost:0/static/mobile-carriers/orange/logos/wordmark.png", carriers[1].logos[1].url)
 
-        assertEquals(1, carriers[1].phonePrefixes.size)
+        assertEquals(2, carriers[1].phonePrefixes.size)
         assertEquals("CM", carriers[1].phonePrefixes[0].country)
         assertEquals(listOf("+23769", "+237655", "+237656", "+237657", "+237658", "+237659"), carriers[1].phonePrefixes[0].prefixes)
+        assertEquals("GB", carriers[1].phonePrefixes[1].country)
+        assertEquals(listOf("+44"), carriers[1].phonePrefixes[1].prefixes)
     }
 
     @Test

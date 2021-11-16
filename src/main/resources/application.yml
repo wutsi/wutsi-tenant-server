@@ -99,6 +99,7 @@ wutsi:
       name: Orange
       countries:
         - CM
+        - GB
       phone-prefixes:
         CM:
           - "+23769"
@@ -107,6 +108,8 @@ wutsi:
           - "+237657"
           - "+237658"
           - "+237659"
+        GB:
+          - "+44"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
