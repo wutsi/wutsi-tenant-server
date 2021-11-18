@@ -1,9 +1,11 @@
 package com.wutsi.platform.tenant.delegate
 
+import com.wutsi.platform.tenant.dto.Limits
 import com.wutsi.platform.tenant.dto.Logo
 import com.wutsi.platform.tenant.dto.MobileCarrier
 import com.wutsi.platform.tenant.dto.PhonePrefix
 import com.wutsi.platform.tenant.dto.Tenant
+import com.wutsi.platform.tenant.entity.LimitsEntity
 import com.wutsi.platform.tenant.entity.LogoEntity
 import com.wutsi.platform.tenant.entity.MobileCarrierEntity
 import com.wutsi.platform.tenant.entity.TenantEntity
@@ -23,7 +25,14 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
             carriers[it]?.toMobileCarrier()
         else
             null
-    }.filterNotNull()
+    }.filterNotNull(),
+    limits = this.limits.map { it.toLimits() }
+)
+
+fun LimitsEntity.toLimits() = Limits(
+    country = this.country,
+    minCashin = this.minCashin,
+    minCashout = this.minCashout
 )
 
 fun LogoEntity.toLogo() = Logo(
@@ -36,5 +45,7 @@ fun MobileCarrierEntity.toMobileCarrier() = MobileCarrier(
     name = this.name,
     countries = this.countries,
     logos = this.logos.map { it.toLogo() },
-    phonePrefixes = this.phonePrefixes.keys.map { PhonePrefix(country = it, prefixes = this.phonePrefixes[it] ?: emptyList()) }
+    phonePrefixes = this.phonePrefixes.keys.map {
+        PhonePrefix(country = it, prefixes = this.phonePrefixes[it] ?: emptyList())
+    }
 )

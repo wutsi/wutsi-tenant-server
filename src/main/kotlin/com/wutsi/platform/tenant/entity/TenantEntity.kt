@@ -10,5 +10,6 @@ public data class TenantEntity(
     public var countries: List<String> = emptyList(),
     public var languages: List<String> = emptyList(),
     public var logos: List<LogoEntity> = emptyList(),
-    public var mobileCarriers: List<String> = emptyList()
+    public var mobileCarriers: List<String> = emptyList(),
+    public var limits: List<LimitsEntity> = emptyList(),
 )

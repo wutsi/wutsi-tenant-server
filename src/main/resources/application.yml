@@ -62,6 +62,11 @@ wutsi:
       currency: XAF
       number-format: "#,###,##0"
       monetary-format: "#,###,##0 XAF"
+      logos:
+        - type: PICTORIAL
+          url: "${wutsi.application.asset-url}/tenants/1/logos/pictorial.png"
+        - type: WORDMARK
+          url: "${wutsi.application.asset-url}/tenants/1/logos/wordmark.png"
       countries:
         - CM
         - GB
@@ -71,11 +76,13 @@ wutsi:
       mobile-carriers:
         - mtn
         - orange
-      logos:
-        - type: PICTORIAL
-          url: "${wutsi.application.asset-url}/tenants/1/logos/pictorial.png"
-        - type: WORDMARK
-          url: "${wutsi.application.asset-url}/tenants/1/logos/wordmark.png"
+      limits:
+        - country: CM
+          min-cashin: 5000
+          min-cashout: 5000
+        - country: GB
+          min-cashin: 5000
+          min-cashout: 5000
 
   mobile-carriers:
     - code: mtn
@@ -90,6 +97,12 @@ wutsi:
           - "+237652"
           - "+237653"
           - "+237654"
+          - "+237675"
+          - "+237676"
+          - "+237677"
+          - "+237678"
+          - "+237679"
+          - "+237680"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/pictorial.png"
