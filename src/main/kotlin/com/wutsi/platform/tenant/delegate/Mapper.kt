@@ -26,11 +26,10 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
         else
             null
     }.filterNotNull(),
-    limits = this.limits.map { it.toLimits() }
+    limits = this.limits.toLimits()
 )
 
 fun LimitsEntity.toLimits() = Limits(
-    country = this.country,
     minCashin = this.minCashin,
     minCashout = this.minCashout
 )

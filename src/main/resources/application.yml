@@ -77,12 +77,8 @@ wutsi:
         - mtn
         - orange
       limits:
-        - country: CM
-          min-cashin: 5000
-          min-cashout: 5000
-        - country: GB
-          min-cashin: 5000
-          min-cashout: 5000
+        min-cashin: 5000
+        min-cashout: 5000
 
   mobile-carriers:
     - code: mtn

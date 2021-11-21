@@ -48,14 +48,8 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("WORDMARK", tenant.logos[1].type)
         assertEquals("http://localhost:0/static/tenants/1/logos/wordmark.png", tenant.logos[1].url)
 
-        assertEquals(2, tenant.limits.size)
-        assertEquals("CM", tenant.limits[0].country)
-        assertEquals(5000.0, tenant.limits[0].minCashin)
-        assertEquals(5000.0, tenant.limits[0].minCashout)
-
-        assertEquals("GB", tenant.limits[1].country)
-        assertEquals(5000.0, tenant.limits[1].minCashin)
-        assertEquals(5000.0, tenant.limits[1].minCashout)
+        assertEquals(5000.0, tenant.limits.minCashin)
+        assertEquals(5000.0, tenant.limits.minCashout)
 
         val carriers = response.body.tenant.mobileCarriers
         assertEquals(2, carriers.size)
