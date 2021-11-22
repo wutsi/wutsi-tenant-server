@@ -59,6 +59,7 @@ wutsi:
     - id: 1
       name: Wutsi
       domain-name: www.wutsi.com
+      install-url: https://bit.ly/300PO2X
       currency: XAF
       number-format: "#,###,##0"
       monetary-format: "#,###,##0 XAF"
