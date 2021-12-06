@@ -71,6 +71,7 @@ wutsi:
       countries:
         - CM
         - GB
+        - CA
       languages:
         - en
         - fr
@@ -111,6 +112,7 @@ wutsi:
       countries:
         - CM
         - GB
+        - CA
       phone-prefixes:
         CM:
           - "+23769"
@@ -121,6 +123,8 @@ wutsi:
           - "+237659"
         GB:
           - "+44"
+        CA:
+          - "+1"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
