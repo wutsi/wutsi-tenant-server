@@ -22,7 +22,7 @@ jobs:
           aws s3 sync \
             --acl public-read \
             --region us-east-1 \
-            target/classes/static/ s3://wutsi-tenant-asset-int/
+            src/main/resources/static/ s3://wutsi-tenant-asset-int/
 
       - name: S3-Deploy-Prod
         env:
@@ -32,4 +32,4 @@ jobs:
           aws s3 sync \
             --acl public-read \
             --region us-east-1 \
-            target/classes/static/ s3://wutsi-tenant-asset-prod/
+            src/main/resources/static/ s3://wutsi-tenant-asset-prod/
