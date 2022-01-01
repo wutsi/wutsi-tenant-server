@@ -38,7 +38,11 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("https://bit.ly/300PO2X", tenant.installUrl)
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
-        assertEquals("#,###,##0 XAF", tenant.monetaryFormat)
+        assertEquals("#,###,##0 CFA", tenant.monetaryFormat)
+        assertEquals("CFA", tenant.currencySymbol)
+        assertEquals("dd MMM yyy", tenant.dateFormat)
+        assertEquals("HH:mm", tenant.timeFormat)
+        assertEquals("dd MMM yyy, HH:mm", tenant.dateTimeFormat)
         assertEquals(listOf("CM", "GB", "CA"), tenant.countries)
         assertEquals(listOf("en", "fr"), tenant.languages)
         assertEquals(2, tenant.logos.size)
@@ -69,7 +73,18 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CM", carriers[0].phonePrefixes[0].country)
         assertEquals(
             listOf(
-                "+23767", "+237650", "+237651", "+237652", "+237653", "+237654", "+237675", "+237676", "+237677", "+237678", "+237679", "+237680"
+                "+23767",
+                "+237650",
+                "+237651",
+                "+237652",
+                "+237653",
+                "+237654",
+                "+237675",
+                "+237676",
+                "+237677",
+                "+237678",
+                "+237679",
+                "+237680"
             ),
             carriers[0].phonePrefixes[0].prefixes
         )
@@ -86,7 +101,10 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(3, carriers[1].phonePrefixes.size)
         assertEquals("CM", carriers[1].phonePrefixes[0].country)
-        assertEquals(listOf("+23769", "+237655", "+237656", "+237657", "+237658", "+237659"), carriers[1].phonePrefixes[0].prefixes)
+        assertEquals(
+            listOf("+23769", "+237655", "+237656", "+237657", "+237658", "+237659"),
+            carriers[1].phonePrefixes[0].prefixes
+        )
         assertEquals("GB", carriers[1].phonePrefixes[1].country)
         assertEquals(listOf("+44"), carriers[1].phonePrefixes[1].prefixes)
         assertEquals("CA", carriers[1].phonePrefixes[2].country)

@@ -27,7 +27,11 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
         else
             null
     }.filterNotNull(),
-    limits = this.limits.toLimits()
+    limits = this.limits.toLimits(),
+    currencySymbol = this.currencySymbol,
+    dateFormat = this.dateFormat,
+    timeFormat = this.timeFormat,
+    dateTimeFormat = this.dateTimeFormat
 )
 
 fun LimitsEntity.toLimits() = Limits(

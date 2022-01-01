@@ -124,15 +124,30 @@ components:
         domainName:
           type: string
           description: Tenant domain name
+        installUrl:
+          type: string
+          description: URL from where to install the App
         currency:
           type: string
           description: Currency of this tenant
+        currencySymbol:
+          type: string
+          description: Currency Symbol
         numberFormat:
           type: string
           description: Format to apply for numeric values
         monetaryFormat:
           type: string
           description: Format to apply to monetary values
+        dateFormat:
+          type: string
+          description: Date Format
+        timeFormat:
+          type: string
+          description: Time Format
+        dateTimeFormat:
+          type: string
+          description: Date+Time Format
         limits:
           type: object
           description: Information about limits of users

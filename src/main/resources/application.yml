@@ -61,8 +61,12 @@ wutsi:
       domain-name: www.wutsi.com
       install-url: https://bit.ly/300PO2X
       currency: XAF
+      currencySymbol: CFA
       number-format: "#,###,##0"
-      monetary-format: "#,###,##0 XAF"
+      monetary-format: "#,###,##0 CFA"
+      date-format: "dd MMM yyy"
+      time-format: "HH:mm"
+      date-time-format: "dd MMM yyy, HH:mm"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-url}/tenants/1/logos/pictorial.png"
