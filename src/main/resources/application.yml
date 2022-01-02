@@ -61,7 +61,7 @@ wutsi:
       domain-name: www.wutsi.com
       install-url: https://bit.ly/300PO2X
       currency: XAF
-      currencySymbol: CFA
+      currencySymbol: FCFA
       number-format: "#,###,##0"
       monetary-format: "#,###,##0 CFA"
       date-format: "dd MMM yyy"

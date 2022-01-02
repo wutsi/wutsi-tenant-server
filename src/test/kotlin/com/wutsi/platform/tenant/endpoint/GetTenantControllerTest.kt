@@ -39,7 +39,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
         assertEquals("#,###,##0 CFA", tenant.monetaryFormat)
-        assertEquals("CFA", tenant.currencySymbol)
+        assertEquals("FCFA", tenant.currencySymbol)
         assertEquals("dd MMM yyy", tenant.dateFormat)
         assertEquals("HH:mm", tenant.timeFormat)
         assertEquals("dd MMM yyy, HH:mm", tenant.dateTimeFormat)
