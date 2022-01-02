@@ -38,7 +38,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("https://bit.ly/300PO2X", tenant.installUrl)
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
-        assertEquals("#,###,##0 CFA", tenant.monetaryFormat)
+        assertEquals("#,###,##0 FCFA", tenant.monetaryFormat)
         assertEquals("FCFA", tenant.currencySymbol)
         assertEquals("dd MMM yyy", tenant.dateFormat)
         assertEquals("HH:mm", tenant.timeFormat)

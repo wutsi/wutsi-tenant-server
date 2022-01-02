@@ -63,7 +63,7 @@ wutsi:
       currency: XAF
       currencySymbol: FCFA
       number-format: "#,###,##0"
-      monetary-format: "#,###,##0 CFA"
+      monetary-format: "#,###,##0 FCFA"
       date-format: "dd MMM yyy"
       time-format: "HH:mm"
       date-time-format: "dd MMM yyy, HH:mm"
