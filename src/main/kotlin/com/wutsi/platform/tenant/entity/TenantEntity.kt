@@ -17,4 +17,5 @@ public data class TenantEntity(
     public var logos: List<LogoEntity> = emptyList(),
     public var mobileCarriers: List<String> = emptyList(),
     public var limits: LimitsEntity = LimitsEntity(),
+    public var fees: List<FeeEntity> = emptyList()
 )

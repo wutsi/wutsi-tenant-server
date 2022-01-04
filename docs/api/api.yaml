@@ -111,6 +111,36 @@ components:
           format: double
           description: Minimum amount to cashout
 
+    Fee:
+      type: object
+      properties:
+        accountType:
+          type: string
+          enum:
+            - business
+            - user
+          description: Type of account
+        transactionType:
+          type: string
+          enum:
+            - cashin
+            - cashout
+            - transfer
+            - payment
+          description: Type of transaction
+        retail:
+          type: boolean
+          nullable: true
+          description: Is this a business account of a retailler?
+        amount:
+          type: number
+          format: double
+          description: Fees amount
+        percent:
+          type: number
+          format: double
+          description: Fees percentage
+
     Tenant:
       type: object
       properties:
@@ -172,6 +202,11 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/MobileCarrier"
+        fees:
+          description: List of fees
+          type: array
+          items:
+            $ref: "#/components/schemas/Fee"
 
     GetTenantResponse:
       type: object

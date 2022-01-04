@@ -1,10 +1,12 @@
 package com.wutsi.platform.tenant.delegate
 
+import com.wutsi.platform.tenant.dto.Fee
 import com.wutsi.platform.tenant.dto.Limits
 import com.wutsi.platform.tenant.dto.Logo
 import com.wutsi.platform.tenant.dto.MobileCarrier
 import com.wutsi.platform.tenant.dto.PhonePrefix
 import com.wutsi.platform.tenant.dto.Tenant
+import com.wutsi.platform.tenant.entity.FeeEntity
 import com.wutsi.platform.tenant.entity.LimitsEntity
 import com.wutsi.platform.tenant.entity.LogoEntity
 import com.wutsi.platform.tenant.entity.MobileCarrierEntity
@@ -31,7 +33,8 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     currencySymbol = this.currencySymbol,
     dateFormat = this.dateFormat,
     timeFormat = this.timeFormat,
-    dateTimeFormat = this.dateTimeFormat
+    dateTimeFormat = this.dateTimeFormat,
+    fees = this.fees.map { it.toFee() }
 )
 
 fun LimitsEntity.toLimits() = Limits(
@@ -52,4 +55,12 @@ fun MobileCarrierEntity.toMobileCarrier() = MobileCarrier(
     phonePrefixes = this.phonePrefixes.keys.map {
         PhonePrefix(country = it, prefixes = this.phonePrefixes[it] ?: emptyList())
     }
+)
+
+fun FeeEntity.toFee() = Fee(
+    transactionType = this.transactionType,
+    accountType = this.accountType,
+    retail = this.retail,
+    percent = this.percent,
+    amount = this.amount
 )

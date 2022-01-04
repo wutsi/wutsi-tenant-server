@@ -85,6 +85,20 @@ wutsi:
       limits:
         min-cashin: 5000
         min-cashout: 5000
+      fees:
+        - account-type: business
+          transaction-type: cashout
+          retail: true
+          percent: 0.02
+          amount: 0
+        - account-type: business
+          transaction-type: payment
+          percent: 0.02
+          amount: 0
+        - account-type: user
+          transaction-type: transfer
+          percent: 0
+          amount: 100
 
   mobile-carriers:
     - code: mtn
