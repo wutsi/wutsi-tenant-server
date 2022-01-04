@@ -111,21 +111,21 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertEquals("business", tenant.fees[0].accountType)
-        assertEquals("cashout", tenant.fees[0].transactionType)
+        assertNull(tenant.fees[0].business)
         assertEquals(true, tenant.fees[0].retail)
+        assertEquals("cashout", tenant.fees[0].transactionType)
         assertEquals(0.0, tenant.fees[0].amount)
         assertEquals(0.02, tenant.fees[0].percent)
 
-        assertEquals("business", tenant.fees[1].accountType)
-        assertEquals("payment", tenant.fees[1].transactionType)
+        assertNull(tenant.fees[1].business)
         assertNull(tenant.fees[1].retail)
+        assertEquals("payment", tenant.fees[1].transactionType)
         assertEquals(0.0, tenant.fees[1].amount)
         assertEquals(0.02, tenant.fees[1].percent)
 
-        assertEquals("user", tenant.fees[2].accountType)
-        assertEquals("transfer", tenant.fees[2].transactionType)
+        assertEquals(false, tenant.fees[2].business)
         assertNull(tenant.fees[2].retail)
+        assertEquals("transfer", tenant.fees[2].transactionType)
         assertEquals(100.0, tenant.fees[2].amount)
         assertEquals(0.0, tenant.fees[2].percent)
     }

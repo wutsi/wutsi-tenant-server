@@ -114,12 +114,6 @@ components:
     Fee:
       type: object
       properties:
-        accountType:
-          type: string
-          enum:
-            - business
-            - user
-          description: Type of account
         transactionType:
           type: string
           enum:
@@ -128,10 +122,14 @@ components:
             - transfer
             - payment
           description: Type of transaction
+        business:
+          type: boolean
+          description: Business account?
+          nullable: true
         retail:
           type: boolean
+          description: Retail account?
           nullable: true
-          description: Is this a business account of a retailler?
         amount:
           type: number
           format: double
