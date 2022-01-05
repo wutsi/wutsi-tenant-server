@@ -60,7 +60,6 @@ fun MobileCarrierEntity.toMobileCarrier() = MobileCarrier(
 fun FeeEntity.toFee() = Fee(
     transactionType = this.transactionType,
     business = this.business,
-    retail = this.retail,
     percent = this.percent,
     amount = this.amount,
     applyToSender = this.applyToSender

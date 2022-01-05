@@ -125,11 +125,6 @@ components:
         business:
           type: boolean
           description: Business account?
-          nullable: true
-        retail:
-          type: boolean
-          description: Retail account?
-          nullable: true
         amount:
           type: number
           format: double

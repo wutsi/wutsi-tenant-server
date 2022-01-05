@@ -10,7 +10,6 @@ import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
-import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -113,25 +112,22 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertNull(tenant.fees[0].business)
-        assertEquals(true, tenant.fees[0].retail)
-        assertEquals("cashout", tenant.fees[0].transactionType)
+        assertTrue(tenant.fees[0].business)
+        assertEquals("payment", tenant.fees[0].transactionType)
         assertEquals(0.0, tenant.fees[0].amount)
         assertEquals(0.02, tenant.fees[0].percent)
         assertFalse(tenant.fees[0].applyToSender)
 
-        assertNull(tenant.fees[1].business)
-        assertNull(tenant.fees[1].retail)
-        assertEquals("payment", tenant.fees[1].transactionType)
-        assertEquals(0.0, tenant.fees[1].amount)
-        assertEquals(0.02, tenant.fees[1].percent)
-        assertFalse(tenant.fees[1].applyToSender)
+        assertFalse(tenant.fees[1].business)
+        assertEquals("transfer", tenant.fees[1].transactionType)
+        assertEquals(100.0, tenant.fees[1].amount)
+        assertEquals(0.0, tenant.fees[1].percent)
+        assertTrue(tenant.fees[1].applyToSender)
 
-        assertEquals(false, tenant.fees[2].business)
-        assertNull(tenant.fees[2].retail)
+        assertTrue(tenant.fees[2].business)
         assertEquals("transfer", tenant.fees[2].transactionType)
-        assertEquals(100.0, tenant.fees[2].amount)
-        assertEquals(0.0, tenant.fees[2].percent)
+        assertEquals(0.0, tenant.fees[2].amount)
+        assertEquals(0.02, tenant.fees[2].percent)
         assertTrue(tenant.fees[2].applyToSender)
     }
 
