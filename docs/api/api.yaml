@@ -138,6 +138,9 @@ components:
           type: number
           format: double
           description: Fees percentage
+        applyToSender:
+          type: boolean
+          description: Apply to fees to the sender
 
     Tenant:
       type: object

@@ -87,13 +87,16 @@ wutsi:
         min-cashout: 5000
       fees:
         - transaction-type: cashout   # 2% on cashout for retailler
+          apply-to-sender: false
           retail: true
           percent: 0.02
           amount: 0
         - transaction-type: payment   # 2% on payment
+          apply-to-sender: false
           percent: 0.02
           amount: 0
         - transaction-type: transfer  # 100 FCFA on transfer for non-business accounts
+          apply-to-sender: true
           business: false
           percent: 0
           amount: 100

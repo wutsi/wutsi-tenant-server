@@ -62,5 +62,6 @@ fun FeeEntity.toFee() = Fee(
     business = this.business,
     retail = this.retail,
     percent = this.percent,
-    amount = this.amount
+    amount = this.amount,
+    applyToSender = this.applyToSender
 )

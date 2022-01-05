@@ -5,5 +5,6 @@ public data class FeeEntity(
     public var business: Boolean? = null,
     public var retail: Boolean? = null,
     public var amount: Double = 0.0,
-    public var percent: Double = 0.0
+    public var percent: Double = 0.0,
+    public var applyToSender: Boolean = false,
 )
