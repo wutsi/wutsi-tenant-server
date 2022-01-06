@@ -86,21 +86,21 @@ wutsi:
         min-cashin: 5000
         min-cashout: 5000
       fees:
-        - transaction-type: payment   # 2% on payment, fees paid by receiver
+        - transaction-type: payment   # 2%+100 on payment, fees paid by receiver
           apply-to-sender: false
           business: true
           percent: 0.02
-          amount: 0
+          amount: 100
         - transaction-type: transfer  # 100FCFA on transfer, fees paid by sender
           apply-to-sender: true
           business: false
           percent: 0
           amount: 100
-        - transaction-type: transfer   # 2% on transfer, fees paid by receiver
+        - transaction-type: transfer   # 2%+100 on transfer, fees paid by receiver
           apply-to-sender: true
           business: true
           percent: 0.02
-          amount: 0
+          amount: 100
 
   mobile-carriers:
     - code: mtn
