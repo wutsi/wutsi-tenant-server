@@ -59,7 +59,7 @@ wutsi:
     - id: 1
       name: Wutsi
       domain-name: www.wutsi.com
-      install-url: https://bit.ly/300PO2X
+      install-url: https://play.google.com/store/apps/details?id=com.wutsi.wutsi_wallet
       currency: XAF
       currencySymbol: FCFA
       number-format: "#,###,##0"

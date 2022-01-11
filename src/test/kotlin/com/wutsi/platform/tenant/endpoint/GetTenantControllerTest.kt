@@ -37,7 +37,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(1L, tenant.id)
         assertEquals("Wutsi", tenant.name)
         assertEquals("www.wutsi.com", tenant.domainName)
-        assertEquals("https://bit.ly/300PO2X", tenant.installUrl)
+        assertEquals("https://play.google.com/store/apps/details?id=com.wutsi.wutsi_wallet", tenant.installUrl)
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
         assertEquals("#,###,##0 FCFA", tenant.monetaryFormat)
