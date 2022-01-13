@@ -83,8 +83,8 @@ wutsi:
         - mtn
         - orange
       limits:
-        min-cashin: 5000
-        min-cashout: 5000
+        min-cashin: 500
+        min-cashout: 500
       fees:
         - transaction-type: payment   # 2%+100 on payment, fees paid by receiver
           apply-to-sender: false
