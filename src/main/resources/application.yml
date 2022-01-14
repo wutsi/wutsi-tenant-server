@@ -104,7 +104,7 @@ wutsi:
           percent: 0.02
           amount: 0
         - transaction-type: cashout   # 2%+100 on cashout, fees paid by receiver
-          apply-to-sender: false
+          apply-to-sender: true
           percent: 0.02
           amount: 0
 
