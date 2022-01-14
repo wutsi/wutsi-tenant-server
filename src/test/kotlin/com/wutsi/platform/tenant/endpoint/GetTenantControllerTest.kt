@@ -122,7 +122,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(100.0, tenant.fees[0].amount)
         assertEquals(0.0, tenant.fees[0].percent)
 
-        assertEquals("checkout", tenant.fees[1].transactionType)
+        assertEquals("cashout", tenant.fees[1].transactionType)
         assertTrue(tenant.fees[1].applyToSender)
         assertEquals(true, tenant.fees[1].business)
         assertEquals(false, tenant.fees[1].retail)
@@ -130,7 +130,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(0.0, tenant.fees[1].amount)
         assertEquals(0.01, tenant.fees[1].percent)
 
-        assertEquals("checkout", tenant.fees[2].transactionType)
+        assertEquals("cashout", tenant.fees[2].transactionType)
         assertTrue(tenant.fees[2].applyToSender)
         assertEquals(true, tenant.fees[2].business)
         assertEquals(true, tenant.fees[2].retail)
@@ -138,7 +138,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(0.0, tenant.fees[2].amount)
         assertEquals(0.02, tenant.fees[2].percent)
 
-        assertEquals("payment", tenant.fees[3].transactionType)
+        assertEquals("cashout", tenant.fees[3].transactionType)
         assertFalse(tenant.fees[3].applyToSender)
         assertNull(tenant.fees[3].business)
         assertNull(tenant.fees[3].retail)
