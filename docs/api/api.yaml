@@ -125,6 +125,15 @@ components:
         business:
           type: boolean
           description: Business account?
+          nullable: true
+        retail:
+          type: boolean
+          description: Retailler?
+          nullable: true
+        threshold:
+          type: number
+          format: double
+          description: Fees threshold
         amount:
           type: number
           format: double
