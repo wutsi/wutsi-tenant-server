@@ -112,7 +112,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertEquals(4, tenant.fees.size)
+        assertEquals(3, tenant.fees.size)
         assertEquals("transfer", tenant.fees[0].transactionType)
         assertTrue(tenant.fees[0].applyToSender)
         assertNull(tenant.fees[0].business)
@@ -124,26 +124,18 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("cashout", tenant.fees[1].transactionType)
         assertTrue(tenant.fees[1].applyToSender)
         assertEquals(true, tenant.fees[1].business)
-        assertEquals(false, tenant.fees[1].retail)
+        assertNull(tenant.fees[1].retail)
         assertEquals(0.0, tenant.fees[1].threshold)
         assertEquals(0.0, tenant.fees[1].amount)
-        assertEquals(0.01, tenant.fees[1].percent)
+        assertEquals(0.02, tenant.fees[1].percent)
 
         assertEquals("cashout", tenant.fees[2].transactionType)
         assertTrue(tenant.fees[2].applyToSender)
-        assertEquals(true, tenant.fees[2].business)
-        assertEquals(true, tenant.fees[2].retail)
+        assertNull(tenant.fees[2].business)
+        assertNull(tenant.fees[2].retail)
         assertEquals(0.0, tenant.fees[2].threshold)
         assertEquals(0.0, tenant.fees[2].amount)
-        assertEquals(0.02, tenant.fees[2].percent)
-
-        assertEquals("cashout", tenant.fees[3].transactionType)
-        assertTrue(tenant.fees[3].applyToSender)
-        assertNull(tenant.fees[3].business)
-        assertNull(tenant.fees[3].retail)
-        assertEquals(0.0, tenant.fees[3].threshold)
-        assertEquals(0.0, tenant.fees[3].amount)
-        assertEquals(0.02, tenant.fees[3].percent)
+        assertEquals(0.01, tenant.fees[2].percent)
     }
 
     @Test
