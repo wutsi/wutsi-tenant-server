@@ -9,6 +9,7 @@ import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
@@ -112,7 +113,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertEquals(3, tenant.fees.size)
+        assertEquals(4, tenant.fees.size)
         assertEquals("transfer", tenant.fees[0].transactionType)
         assertTrue(tenant.fees[0].applyToSender)
         assertNull(tenant.fees[0].business)
@@ -136,6 +137,14 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(0.0, tenant.fees[2].threshold)
         assertEquals(0.0, tenant.fees[2].amount)
         assertEquals(0.01, tenant.fees[2].percent)
+
+        assertEquals("payment", tenant.fees[3].transactionType)
+        assertFalse(tenant.fees[3].applyToSender)
+        assertNull(tenant.fees[3].business)
+        assertNull(tenant.fees[3].retail)
+        assertEquals(0.0, tenant.fees[3].threshold)
+        assertEquals(0.0, tenant.fees[3].amount)
+        assertEquals(0.04, tenant.fees[3].percent)
     }
 
     @Test
