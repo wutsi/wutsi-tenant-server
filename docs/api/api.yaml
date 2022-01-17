@@ -122,13 +122,13 @@ components:
             - transfer
             - payment
           description: Type of transaction
-        business:
+        fromRetail:
           type: boolean
-          description: Business account?
+          description: Transaction from retailler?
           nullable: true
-        retail:
+        toRetail:
           type: boolean
-          description: Retailler?
+          description: Transaction to retailler?
           nullable: true
         threshold:
           type: number

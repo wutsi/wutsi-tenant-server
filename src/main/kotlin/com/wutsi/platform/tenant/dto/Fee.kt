@@ -6,8 +6,8 @@ import kotlin.String
 
 public data class Fee(
     public val transactionType: String = "",
-    public val business: Boolean? = null,
-    public val retail: Boolean? = null,
+    public val fromRetail: Boolean? = null,
+    public val toRetail: Boolean? = null,
     public val threshold: Double = 0.0,
     public val amount: Double = 0.0,
     public val percent: Double = 0.0,

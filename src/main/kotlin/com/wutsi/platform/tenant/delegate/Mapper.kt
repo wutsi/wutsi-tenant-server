@@ -59,8 +59,8 @@ fun MobileCarrierEntity.toMobileCarrier() = MobileCarrier(
 
 fun FeeEntity.toFee() = Fee(
     transactionType = this.transactionType,
-    business = this.business,
-    retail = this.retail,
+    fromRetail = this.fromRetail,
+    toRetail = this.toRetail,
     threshold = this.threshold,
     percent = this.percent,
     amount = this.amount,

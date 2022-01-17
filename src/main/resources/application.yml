@@ -91,9 +91,14 @@ wutsi:
           threshold: 5000
           percent: 0
           amount: 100
-        - transaction-type: cashout   # 2% fees on cashout from business (retailer), fees paid by sender
+        - transaction-type: transfer  # No fees when retailer transfers $$ to customer for cashin
+          apply-to-sender: false
+          from-retail: true
+          percent: 0
+          amount: 0
+        - transaction-type: transfer  # 2% fees when customer transfers $$ to retail for cashout
           apply-to-sender: true
-          business: true
+          to-retail: true
           percent: 0.02
           amount: 0
         - transaction-type: cashout   # 1% on cashout, fees paid by sender
