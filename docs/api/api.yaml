@@ -159,6 +159,9 @@ components:
         domainName:
           type: string
           description: Tenant domain name
+        supportEmail:
+          type: string
+          description: Support Email
         installUrl:
           type: string
           description: URL from where to install the App

@@ -8,6 +8,7 @@ public data class Tenant(
     public val id: Long = 0,
     public val name: String = "",
     public val domainName: String = "",
+    public val supportEmail: String = "",
     public val installUrl: String = "",
     public val currency: String = "",
     public val currencySymbol: String = "",

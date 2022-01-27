@@ -15,6 +15,7 @@ import com.wutsi.platform.tenant.entity.TenantEntity
 fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     id = this.id,
     domainName = this.domainName,
+    supportEmail = this.supportEmail,
     currency = this.currency,
     installUrl = this.installUrl,
     name = this.name,

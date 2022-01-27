@@ -4,6 +4,7 @@ public data class TenantEntity(
     public var id: Long = 0,
     public var name: String = "",
     public var domainName: String = "",
+    public var supportEmail: String = "",
     public var installUrl: String = "",
     public var currency: String = "",
     public var numberFormat: String = "",
