@@ -46,7 +46,7 @@ wutsi:
   client-id: wutsi-tenant
   application:
     name: wutsi-tenant
-    asset-url: http://localhost:${server.port}/static
+    asset-url: http://localhost:${server.port}
     asset-root-url: ${wutsi.application.asset-url}/static/wutsi-tenant-server
   platform:
     security:

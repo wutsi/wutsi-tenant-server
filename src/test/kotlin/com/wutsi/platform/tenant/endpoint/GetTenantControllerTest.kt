@@ -52,10 +52,10 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(2, tenant.logos.size)
 
         assertEquals("PICTORIAL", tenant.logos[0].type)
-        assertEquals("http://localhost:0/static/tenants/1/logos/pictorial.png", tenant.logos[0].url)
+        assertEquals("http://localhost:0/static/wutsi-tenant-server/tenants/1/logos/pictorial.png", tenant.logos[0].url)
 
         assertEquals("WORDMARK", tenant.logos[1].type)
-        assertEquals("http://localhost:0/static/tenants/1/logos/wordmark.png", tenant.logos[1].url)
+        assertEquals("http://localhost:0/static/wutsi-tenant-server/tenants/1/logos/wordmark.png", tenant.logos[1].url)
 
         assertEquals(500.0, tenant.limits.minCashin)
         assertEquals(500.0, tenant.limits.minCashout)
@@ -69,9 +69,15 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(2, carriers[0].logos.size)
         assertEquals("PICTORIAL", carriers[0].logos[0].type)
-        assertEquals("http://localhost:0/static/mobile-carriers/mtn/logos/pictorial.png", carriers[0].logos[0].url)
+        assertEquals(
+            "http://localhost:0/static/wutsi-tenant-server/mobile-carriers/mtn/logos/pictorial.png",
+            carriers[0].logos[0].url
+        )
         assertEquals("WORDMARK", carriers[0].logos[1].type)
-        assertEquals("http://localhost:0/static/mobile-carriers/mtn/logos/wordmark.png", carriers[0].logos[1].url)
+        assertEquals(
+            "http://localhost:0/static/wutsi-tenant-server/mobile-carriers/mtn/logos/wordmark.png",
+            carriers[0].logos[1].url
+        )
 
         assertEquals(1, carriers[0].phonePrefixes.size)
         assertEquals("CM", carriers[0].phonePrefixes[0].country)
@@ -99,9 +105,15 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(2, carriers[1].logos.size)
         assertEquals("PICTORIAL", carriers[1].logos[0].type)
-        assertEquals("http://localhost:0/static/mobile-carriers/orange/logos/pictorial.png", carriers[1].logos[0].url)
+        assertEquals(
+            "http://localhost:0/static/wutsi-tenant-server/mobile-carriers/orange/logos/pictorial.png",
+            carriers[1].logos[0].url
+        )
         assertEquals("WORDMARK", carriers[1].logos[1].type)
-        assertEquals("http://localhost:0/static/mobile-carriers/orange/logos/wordmark.png", carriers[1].logos[1].url)
+        assertEquals(
+            "http://localhost:0/static/wutsi-tenant-server/mobile-carriers/orange/logos/wordmark.png",
+            carriers[1].logos[1].url
+        )
 
         assertEquals(3, carriers[1].phonePrefixes.size)
         assertEquals("CM", carriers[1].phonePrefixes[0].country)
