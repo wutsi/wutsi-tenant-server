@@ -47,6 +47,7 @@ wutsi:
   application:
     name: wutsi-tenant
     asset-url: http://localhost:${server.port}/static
+    asset-root-url: ${wutsi.application.asset-url}/static/wutsi-tenant-server
   platform:
     security:
       type: jwt
@@ -70,9 +71,9 @@ wutsi:
       date-time-format: "dd MMM yyy, HH:mm"
       logos:
         - type: PICTORIAL
-          url: "${wutsi.application.asset-url}/tenants/1/logos/pictorial.png"
+          url: "${wutsi.application.asset-root-url}/tenants/1/logos/pictorial.png"
         - type: WORDMARK
-          url: "${wutsi.application.asset-url}/tenants/1/logos/wordmark.png"
+          url: "${wutsi.application.asset-root-url}/tenants/1/logos/wordmark.png"
       countries:
         - CM
         - GB
@@ -132,9 +133,9 @@ wutsi:
           - "+237680"
       logos:
         - type: PICTORIAL
-          url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/pictorial.png"
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/pictorial.png"
         - type: WORDMARK
-          url: "${wutsi.application.asset-url}/mobile-carriers/mtn/logos/wordmark.png"
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/wordmark.png"
 
     - code: orange
       name: Orange
@@ -156,6 +157,6 @@ wutsi:
           - "+1"
       logos:
         - type: PICTORIAL
-          url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/pictorial.png"
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/orange/logos/pictorial.png"
         - type: WORDMARK
-          url: "${wutsi.application.asset-url}/mobile-carriers/orange/logos/wordmark.png"
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/orange/logos/wordmark.png"

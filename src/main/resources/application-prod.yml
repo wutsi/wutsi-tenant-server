@@ -1,7 +1,7 @@
 wutsi:
   client-id: wutsi-tenant
   application:
-    asset-url: https://wutsi-tenant-asset-prod.s3.amazonaws.com
+    asset-url: https://prod-wutsi.s3.amazonaws.com
   platform:
     security:
       type: jwt
