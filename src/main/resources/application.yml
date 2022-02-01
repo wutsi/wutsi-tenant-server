@@ -60,7 +60,7 @@ wutsi:
     - id: 1
       name: Wutsi
       domain-name: www.wutsi.com
-      support-email: herve.tchepannou@wutsi.com
+      support-email: support@wutsi.app
       install-url: https://www.wutsi.app
       currency: XAF
       currencySymbol: FCFA

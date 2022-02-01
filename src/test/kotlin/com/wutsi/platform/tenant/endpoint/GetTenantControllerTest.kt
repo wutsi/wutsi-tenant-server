@@ -38,7 +38,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(1L, tenant.id)
         assertEquals("Wutsi", tenant.name)
         assertEquals("www.wutsi.com", tenant.domainName)
-        assertEquals("herve.tchepannou@wutsi.com", tenant.supportEmail)
+        assertEquals("support@wutsi.app", tenant.supportEmail)
         assertEquals("https://www.wutsi.app", tenant.installUrl)
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
