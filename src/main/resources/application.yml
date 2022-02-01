@@ -131,6 +131,7 @@ wutsi:
           - "+237678"
           - "+237679"
           - "+237680"
+          - "+237681"
       logos:
         - type: PICTORIAL
           url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/pictorial.png"

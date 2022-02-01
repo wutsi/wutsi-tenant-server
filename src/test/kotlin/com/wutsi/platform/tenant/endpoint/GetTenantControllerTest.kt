@@ -34,7 +34,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(200, response.statusCodeValue)
 
-        val tenant = response.body.tenant
+        val tenant = response.body!!.tenant
         assertEquals(1L, tenant.id)
         assertEquals("Wutsi", tenant.name)
         assertEquals("www.wutsi.com", tenant.domainName)
@@ -60,7 +60,7 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(500.0, tenant.limits.minCashin)
         assertEquals(500.0, tenant.limits.minCashout)
 
-        val carriers = response.body.tenant.mobileCarriers
+        val carriers = response.body!!.tenant.mobileCarriers
         assertEquals(2, carriers.size)
 
         assertEquals("mtn", carriers[0].code)
@@ -94,7 +94,8 @@ public class GetTenantControllerTest : AbstractSecuredController() {
                 "+237677",
                 "+237678",
                 "+237679",
-                "+237680"
+                "+237680",
+                "+237681",
             ),
             carriers[0].phonePrefixes[0].prefixes
         )
