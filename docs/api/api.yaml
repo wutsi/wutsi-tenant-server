@@ -146,6 +146,14 @@ components:
           type: boolean
           description: Apply to fees to the sender
 
+    Product:
+      type: object
+      properties:
+        defaultPictureUrl:
+          type: string
+          format: url
+          description: Default picture URL
+
     Tenant:
       type: object
       properties:
@@ -215,6 +223,9 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Fee"
+        noProductImageUrl:
+          type: object
+          $ref: "#/components/schemas/Product"
 
     GetTenantResponse:
       type: object
@@ -222,4 +233,3 @@ components:
         tenant:
           type: object
           $ref: "#/components/schemas/Tenant"
-

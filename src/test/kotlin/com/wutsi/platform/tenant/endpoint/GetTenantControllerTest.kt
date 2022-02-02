@@ -167,6 +167,11 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(0.0, tenant.fees[4].threshold)
         assertEquals(0.0, tenant.fees[4].amount)
         assertEquals(0.04, tenant.fees[4].percent)
+
+        assertEquals(
+            "http://localhost:0/static/wutsi-tenant-server/products/nopicture.png",
+            tenant.product.defaultPictureUrl
+        )
     }
 
     @Test

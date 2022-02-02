@@ -111,6 +111,8 @@ wutsi:
           apply-to-sender: false
           percent: 0.04
           amount: 0
+      product:
+        default-picture-url: "${wutsi.application.asset-root-url}/products/nopicture.png"
 
   mobile-carriers:
     - code: mtn

@@ -5,11 +5,13 @@ import com.wutsi.platform.tenant.dto.Limits
 import com.wutsi.platform.tenant.dto.Logo
 import com.wutsi.platform.tenant.dto.MobileCarrier
 import com.wutsi.platform.tenant.dto.PhonePrefix
+import com.wutsi.platform.tenant.dto.Product
 import com.wutsi.platform.tenant.dto.Tenant
 import com.wutsi.platform.tenant.entity.FeeEntity
 import com.wutsi.platform.tenant.entity.LimitsEntity
 import com.wutsi.platform.tenant.entity.LogoEntity
 import com.wutsi.platform.tenant.entity.MobileCarrierEntity
+import com.wutsi.platform.tenant.entity.ProductEntity
 import com.wutsi.platform.tenant.entity.TenantEntity
 
 fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
@@ -35,7 +37,8 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     dateFormat = this.dateFormat,
     timeFormat = this.timeFormat,
     dateTimeFormat = this.dateTimeFormat,
-    fees = this.fees.map { it.toFee() }
+    fees = this.fees.map { it.toFee() },
+    product = this.product.toProduct()
 )
 
 fun LimitsEntity.toLimits() = Limits(
@@ -66,4 +69,8 @@ fun FeeEntity.toFee() = Fee(
     percent = this.percent,
     amount = this.amount,
     applyToSender = this.applyToSender
+)
+
+fun ProductEntity.toProduct() = Product(
+    defaultPictureUrl = this.defaultPictureUrl
 )
