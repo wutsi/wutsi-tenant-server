@@ -20,6 +20,7 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     supportEmail = this.supportEmail,
     currency = this.currency,
     installUrl = this.installUrl,
+    webappUrl = this.webappUrl,
     name = this.name,
     countries = this.countries,
     languages = this.languages,

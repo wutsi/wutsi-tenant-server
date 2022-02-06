@@ -6,6 +6,7 @@ public data class TenantEntity(
     public var domainName: String = "",
     public var supportEmail: String = "",
     public var installUrl: String = "",
+    public var webappUrl: String = "",
     public var currency: String = "",
     public var numberFormat: String = "",
     public var monetaryFormat: String = "",

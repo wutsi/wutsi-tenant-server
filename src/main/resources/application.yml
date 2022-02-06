@@ -62,6 +62,7 @@ wutsi:
       domain-name: www.wutsi.com
       support-email: support@wutsi.app
       install-url: https://www.wutsi.app
+      webapp-url: https://wutsi-web-test.herokuapp.com
       currency: XAF
       currencySymbol: FCFA
       number-format: "#,###,##0"
