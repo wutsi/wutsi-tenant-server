@@ -5,3 +5,104 @@ wutsi:
   platform:
     security:
       type: jwt
+
+  tenants:
+    - id: 1
+      name: Wutsi
+      domain-name: www.wutsi.com
+      support-email: support@wutsi.app
+      install-url: https://www.wutsi.app
+      webapp-url: https://www.wutsi.me
+      currency: XAF
+      currencySymbol: FCFA
+      number-format: "#,###,##0"
+      monetary-format: "#,###,##0 FCFA"
+      date-format: "dd MMM yyy"
+      time-format: "HH:mm"
+      date-time-format: "dd MMM yyy, HH:mm"
+      logos:
+        - type: PICTORIAL
+          url: "${wutsi.application.asset-root-url}/tenants/1/logos/pictorial.png"
+        - type: WORDMARK
+          url: "${wutsi.application.asset-root-url}/tenants/1/logos/wordmark.png"
+      countries:
+        - CM
+      languages:
+        - en
+        - fr
+      mobile-carriers:
+        - mtn
+        - orange
+      limits:
+        min-cashin: 500
+        min-cashout: 500
+      fees:
+        - transaction-type: transfer  # 100 FCFA fees on transfer over 5,000 FCFA, fees paid by sender
+          apply-to-sender: true
+          threshold: 5000
+          percent: 0
+          amount: 100
+        - transaction-type: transfer  # No fees when retailer transfers $$ to customer for cashin
+          apply-to-sender: false
+          from-retail: true
+          percent: 0
+          amount: 0
+        - transaction-type: transfer  # 2% fees when customer transfers $$ to retail for cashout
+          apply-to-sender: true
+          to-retail: true
+          percent: 0.02
+          amount: 0
+        - transaction-type: cashout   # 1% on cashout, fees paid by sender
+          apply-to-sender: true
+          percent: 0.01
+          amount: 0
+        - transaction-type: payment   # 5% on cashout, fees paid by receiver (merchant)
+          apply-to-sender: false
+          percent: 0.04
+          amount: 0
+      product:
+        default-picture-url: "${wutsi.application.asset-root-url}/products/nopicture.png"
+
+  mobile-carriers:
+    - code: mtn
+      name: MTN
+      countries:
+        - CM
+      phone-prefixes:
+        CM:
+          - "+23767"
+          - "+237650"
+          - "+237651"
+          - "+237652"
+          - "+237653"
+          - "+237654"
+          - "+237675"
+          - "+237676"
+          - "+237677"
+          - "+237678"
+          - "+237679"
+          - "+237680"
+          - "+237681"
+      logos:
+        - type: PICTORIAL
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/pictorial.png"
+        - type: WORDMARK
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/wordmark.png"
+
+    - code: orange
+      name: Orange
+      countries:
+        - CM
+      phone-prefixes:
+        CM:
+          - "+23769"
+          - "+237655"
+          - "+237656"
+          - "+237657"
+          - "+237658"
+          - "+237659"
+      logos:
+        - type: PICTORIAL
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/orange/logos/pictorial.png"
+        - type: WORDMARK
+          url: "${wutsi.application.asset-root-url}/mobile-carriers/orange/logos/wordmark.png"
