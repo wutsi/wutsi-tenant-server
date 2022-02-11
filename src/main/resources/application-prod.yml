@@ -5,6 +5,10 @@ wutsi:
   platform:
     security:
       type: jwt
+    stream:
+      type: rabbitmq
+      rabbitmq:
+        url: ${CLOUDAMQP_URL}
 
   tenants:
     - id: 1

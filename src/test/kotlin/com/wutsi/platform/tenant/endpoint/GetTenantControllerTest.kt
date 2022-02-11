@@ -40,6 +40,8 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("www.wutsi.com", tenant.domainName)
         assertEquals("support@wutsi.app", tenant.supportEmail)
         assertEquals("https://www.wutsi.app", tenant.installUrl)
+        assertEquals("https://play.google.com/store/apps/details?id=com.wutsi.wutsi_wallet", tenant.installAndroidUrl)
+        assertNull(tenant.installIOSUrl)
         assertEquals("https://wutsi-web-test.herokuapp.com", tenant.webappUrl)
         assertEquals("XAF", tenant.currency)
         assertEquals("#,###,##0", tenant.numberFormat)
@@ -53,7 +55,10 @@ public class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(2, tenant.logos.size)
 
         assertEquals("PICTORIAL", tenant.logos[0].type)
-        assertEquals("http://localhost:0/static/wutsi-tenant-server/tenants/1/logos/pictorial.png", tenant.logos[0].url)
+        assertEquals(
+            "http://localhost:0/static/wutsi-tenant-server/tenants/1/logos/pictorial-round.png",
+            tenant.logos[0].url
+        )
 
         assertEquals("WORDMARK", tenant.logos[1].type)
         assertEquals("http://localhost:0/static/wutsi-tenant-server/tenants/1/logos/wordmark.png", tenant.logos[1].url)

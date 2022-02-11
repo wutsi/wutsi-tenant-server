@@ -5,3 +5,7 @@ wutsi:
   platform:
     security:
       type: jwt
+    stream:
+      type: rabbitmq
+      rabbitmq:
+        url: ${CLOUDAMQP_URL}

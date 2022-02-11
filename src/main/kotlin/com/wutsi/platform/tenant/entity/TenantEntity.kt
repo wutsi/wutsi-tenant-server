@@ -6,6 +6,8 @@ public data class TenantEntity(
     public var domainName: String = "",
     public var supportEmail: String = "",
     public var installUrl: String = "",
+    public var installAndroidUrl: String? = null,
+    public var installIOSUrl: String? = null,
     public var webappUrl: String = "",
     public var currency: String = "",
     public var numberFormat: String = "",

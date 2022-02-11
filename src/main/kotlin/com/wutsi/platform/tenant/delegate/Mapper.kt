@@ -7,6 +7,7 @@ import com.wutsi.platform.tenant.dto.MobileCarrier
 import com.wutsi.platform.tenant.dto.PhonePrefix
 import com.wutsi.platform.tenant.dto.Product
 import com.wutsi.platform.tenant.dto.Tenant
+import com.wutsi.platform.tenant.dto.TenantSummary
 import com.wutsi.platform.tenant.entity.FeeEntity
 import com.wutsi.platform.tenant.entity.LimitsEntity
 import com.wutsi.platform.tenant.entity.LogoEntity
@@ -14,12 +15,21 @@ import com.wutsi.platform.tenant.entity.MobileCarrierEntity
 import com.wutsi.platform.tenant.entity.ProductEntity
 import com.wutsi.platform.tenant.entity.TenantEntity
 
+fun TenantEntity.toTenantSummary() = TenantSummary(
+    id = this.id,
+    domainName = this.domainName,
+    webappUrl = this.webappUrl,
+    name = this.name,
+)
+
 fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     id = this.id,
     domainName = this.domainName,
     supportEmail = this.supportEmail,
     currency = this.currency,
     installUrl = this.installUrl,
+    installAndroidUrl = this.installAndroidUrl,
+    installIOSUrl = this.installIOSUrl,
     webappUrl = this.webappUrl,
     name = this.name,
     countries = this.countries,
