@@ -16,6 +16,8 @@ wutsi:
       domain-name: www.wutsi.com
       support-email: support@wutsi.app
       install-url: https://www.wutsi.app
+      install-android-url: https://play.google.com/store/apps/details?id=com.wutsi.wutsi_wallet
+      #install-ios-url:
       webapp-url: https://www.wutsi.me
       currency: XAF
       currencySymbol: FCFA
@@ -26,7 +28,7 @@ wutsi:
       date-time-format: "dd MMM yyy, HH:mm"
       logos:
         - type: PICTORIAL
-          url: "${wutsi.application.asset-root-url}/tenants/1/logos/pictorial.png"
+          url: "${wutsi.application.asset-root-url}/tenants/1/logos/pictorial-round.png"
         - type: WORDMARK
           url: "${wutsi.application.asset-root-url}/tenants/1/logos/wordmark.png"
       countries:
