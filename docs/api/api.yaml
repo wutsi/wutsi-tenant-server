@@ -147,6 +147,10 @@ components:
           type: boolean
           description: Transaction to retailler?
           nullable: true
+        toBusinees:
+          type: boolean
+          description: Transaction to a business?
+          nullable: true
         threshold:
           type: number
           format: double

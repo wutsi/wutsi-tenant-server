@@ -79,7 +79,8 @@ fun FeeEntity.toFee() = Fee(
     threshold = this.threshold,
     percent = this.percent,
     amount = this.amount,
-    applyToSender = this.applyToSender
+    applyToSender = this.applyToSender,
+    toBusinees = this.toBusiness
 )
 
 fun ProductEntity.toProduct() = Product(
