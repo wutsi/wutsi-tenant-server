@@ -133,7 +133,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertEquals(7, tenant.fees.size)
+        assertEquals(8, tenant.fees.size)
         assertEquals("transfer", tenant.fees[0].transactionType)
         assertTrue(tenant.fees[0].applyToSender)
         assertNull(tenant.fees[0].fromRetail)
@@ -195,6 +195,15 @@ class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(0.0, tenant.fees[6].threshold)
         assertEquals(0.0, tenant.fees[6].amount)
         assertEquals(0.05, tenant.fees[6].percent)
+
+        assertEquals("cashin", tenant.fees[7].transactionType)
+        assertTrue(tenant.fees[7].applyToSender)
+        assertNull(tenant.fees[7].fromRetail)
+        assertNull(tenant.fees[7].toRetail)
+        assertNull(tenant.fees[7].toBusiness)
+        assertEquals(0.0, tenant.fees[7].threshold)
+        assertEquals(0.0, tenant.fees[7].amount)
+        assertEquals(0.0, tenant.fees[7].percent)
 
         assertEquals(
             "http://localhost:0/static/wutsi-tenant-server/products/nopicture.png",

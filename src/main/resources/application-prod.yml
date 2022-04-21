@@ -48,22 +48,22 @@ wutsi:
           threshold: 5000
           percent: 0
           amount: 100
-        - transaction-type: transfer  # No fees when retailer transfers $$ to customer for cashin
+        - transaction-type: transfer  # No fees when retailer transfers $$ to customer for cash-in
           apply-to-sender: false
           from-retail: true
           percent: 0
           amount: 0
-        - transaction-type: transfer  # 2% fees when customer transfers $$ to retail for cashout
+        - transaction-type: transfer  # 2% fees when customer transfers $$ to retail for cash-out
           apply-to-sender: true
           to-retail: true
           percent: 0.02
           amount: 0
-        - transaction-type: transfer  # 5% fees when customer transfers $$ to merchat
+        - transaction-type: transfer  # 5% fees when customer transfers $$ to merchant
           apply-to-sender: false
           to-business: true
           percent: 0.05
           amount: 0
-        - transaction-type: cashout   # 1% on cashout, fees paid by sender
+        - transaction-type: cashout   # 1% on cash-out, fees paid by sender
           apply-to-sender: true
           percent: 0.01
           amount: 0
@@ -75,6 +75,10 @@ wutsi:
           apply-to-sender: false
           to-business: true
           percent: 0.05
+          amount: 0
+        - transaction-type: cashin   # No fees on cash-in, fees (gateway) paid by sender
+          apply-to-sender: true
+          percent: 0.0
           amount: 0
       product:
         default-picture-url: "${wutsi.application.asset-root-url}/products/nopicture.png"
