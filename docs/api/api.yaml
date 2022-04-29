@@ -147,7 +147,7 @@ components:
           type: boolean
           description: Transaction to retailler?
           nullable: true
-        toBusinees:
+        toBusiness:
           type: boolean
           description: Transaction to a business?
           nullable: true
@@ -275,7 +275,28 @@ components:
         product:
           type: object
           $ref: "#/components/schemas/Product"
+        toggles:
+          type: array
+          items:
+            $ref: "#/components/schemas/Toggle"
 
+    Toggle:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+          nullable: true
+        environments:
+          type: array
+          items:
+            type: string
+        tenantIds:
+          type: array
+          items:
+            type: integer
+            format: int64
 
     GetTenantResponse:
       type: object

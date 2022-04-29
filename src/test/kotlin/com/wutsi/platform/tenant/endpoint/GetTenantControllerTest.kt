@@ -1,6 +1,7 @@
 package com.wutsi.platform.tenant.endpoint
 
 import com.wutsi.platform.tenant.dto.GetTenantResponse
+import com.wutsi.platform.tenant.entity.ToggleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -208,6 +209,15 @@ class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(
             "http://localhost:0/static/wutsi-tenant-server/products/nopicture.png",
             tenant.product.defaultPictureUrl
+        )
+
+        assertEquals(2, tenant.toggles.size)
+        assertEquals(
+            listOf(
+                ToggleName.ACCOUNT.name,
+                ToggleName.CART.name
+            ),
+            tenant.toggles.map { it.name }
         )
     }
 

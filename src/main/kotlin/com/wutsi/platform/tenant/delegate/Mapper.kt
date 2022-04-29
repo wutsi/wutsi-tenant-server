@@ -8,12 +8,15 @@ import com.wutsi.platform.tenant.dto.PhonePrefix
 import com.wutsi.platform.tenant.dto.Product
 import com.wutsi.platform.tenant.dto.Tenant
 import com.wutsi.platform.tenant.dto.TenantSummary
+import com.wutsi.platform.tenant.dto.Toggle
 import com.wutsi.platform.tenant.entity.FeeEntity
 import com.wutsi.platform.tenant.entity.LimitsEntity
 import com.wutsi.platform.tenant.entity.LogoEntity
 import com.wutsi.platform.tenant.entity.MobileCarrierEntity
 import com.wutsi.platform.tenant.entity.ProductEntity
 import com.wutsi.platform.tenant.entity.TenantEntity
+import com.wutsi.platform.tenant.entity.ToggleEntity
+import org.springframework.core.env.Environment
 
 fun TenantEntity.toTenantSummary() = TenantSummary(
     id = this.id,
@@ -22,7 +25,7 @@ fun TenantEntity.toTenantSummary() = TenantSummary(
     name = this.name,
 )
 
-fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
+fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>, toggles: List<ToggleEntity>, env: Environment) = Tenant(
     id = this.id,
     domainName = this.domainName,
     supportEmail = this.supportEmail,
@@ -49,7 +52,15 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>) = Tenant(
     timeFormat = this.timeFormat,
     dateTimeFormat = this.dateTimeFormat,
     fees = this.fees.map { it.toFee() },
-    product = this.product.toProduct()
+    product = this.product.toProduct(),
+    toggles = toggles.filter { it.isEnabled(this, env ) }.map { it.toToggle() }
+)
+
+fun ToggleEntity.toToggle() = Toggle(
+    name = this.name,
+    description = this.description,
+    environments = this.environments,
+    tenantIds = this.tenantIds
 )
 
 fun LimitsEntity.toLimits() = Limits(

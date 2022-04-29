@@ -7,14 +7,22 @@ import com.wutsi.platform.core.error.exception.NotFoundException
 import com.wutsi.platform.tenant.dto.GetTenantResponse
 import com.wutsi.platform.tenant.service.TenantService
 import com.wutsi.platform.tenant.util.ErrorURN
+import org.springframework.context.annotation.ScopedProxyMode
+import org.springframework.core.env.Environment
 import org.springframework.stereotype.Service
+import org.springframework.web.context.annotation.RequestScope
 
 @Service
-class GetTenantDelegate(private val service: TenantService) {
+class GetTenantDelegate(
+    private val service: TenantService,
+    private val env: Environment
+) {
     fun invoke(id: Long): GetTenantResponse {
         val carriers = service.mobileCarriers().map { it.code to it }.toMap()
+        val toggles = service.toggles()
+
         return GetTenantResponse(
-            tenant = service.tenants().find { it.id == id }?.toTenant(carriers)
+            tenant = service.tenants().find { it.id == id }?.toTenant(carriers, toggles, env)
                 ?: throw NotFoundException(
                     error = Error(
                         code = ErrorURN.TENANT_NOT_FOUND.urn,

@@ -26,5 +26,6 @@ public data class Tenant(
     public val logos: List<Logo> = emptyList(),
     public val mobileCarriers: List<MobileCarrier> = emptyList(),
     public val fees: List<Fee> = emptyList(),
-    public val product: Product = Product()
+    public val product: Product = Product(),
+    public val toggles: List<Toggle> = emptyList()
 )

@@ -3,6 +3,7 @@ package com.wutsi.platform.tenant.service
 import com.wutsi.platform.core.stream.EventStream
 import com.wutsi.platform.tenant.entity.MobileCarrierEntity
 import com.wutsi.platform.tenant.entity.TenantEntity
+import com.wutsi.platform.tenant.entity.ToggleEntity
 import com.wutsi.platform.tenant.event.EventURN
 import com.wutsi.platform.tenant.event.TenantLoadedEventPayload
 import org.springframework.boot.context.properties.ConfigurationProperties
@@ -14,6 +15,7 @@ import javax.annotation.PostConstruct
 class TenantRepository {
     var tenants: List<TenantEntity> = emptyList()
     var mobileCarriers: List<MobileCarrierEntity> = emptyList()
+    var toggles: List<ToggleEntity> = emptyList()
 }
 
 @Service
@@ -24,6 +26,7 @@ class TenantService(
 ) {
     fun tenants(): List<TenantEntity> = repository.tenants
     fun mobileCarriers(): List<MobileCarrierEntity> = repository.mobileCarriers
+    fun toggles(): List<ToggleEntity> = repository.toggles
 
     @PostConstruct
     fun init() {

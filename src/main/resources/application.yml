@@ -59,6 +59,13 @@ wutsi:
       device-id-provider:
         type: header
 
+  toggles:
+    - name: ACCOUNT
+      description: Enable accounts management
+    - name: CART
+      description: Enable shopping cart
+      environment: ['test']
+
   tenants:
     - id: 1
       name: Wutsi
