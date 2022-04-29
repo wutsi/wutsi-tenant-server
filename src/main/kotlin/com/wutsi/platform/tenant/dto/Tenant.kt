@@ -27,5 +27,7 @@ public data class Tenant(
     public val mobileCarriers: List<MobileCarrier> = emptyList(),
     public val fees: List<Fee> = emptyList(),
     public val product: Product = Product(),
-    public val toggles: List<Toggle> = emptyList()
+    public val toggles: List<Toggle> = emptyList(),
+    public val testUserIds: List<Long> = emptyList(),
+    public val testPhoneNumbers: List<String> = emptyList()
 )

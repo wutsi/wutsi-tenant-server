@@ -54,7 +54,9 @@ fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>, toggles: L
         dateTimeFormat = this.dateTimeFormat,
         fees = this.fees.map { it.toFee() },
         product = this.product.toProduct(),
-        toggles = toggles.filter { it.isEnabled(this, env) }.map { it.toToggle() }
+        toggles = toggles.filter { it.isEnabled(this, env) }.map { it.toToggle() },
+        testPhoneNumbers = this.testPhoneNumbers,
+        testUserIds = this.testUserIds
     )
 
 fun ToggleEntity.toToggle() = Toggle(

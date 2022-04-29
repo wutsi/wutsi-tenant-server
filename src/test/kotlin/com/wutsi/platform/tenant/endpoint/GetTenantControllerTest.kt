@@ -211,6 +211,29 @@ class GetTenantControllerTest : AbstractSecuredController() {
             tenant.product.defaultPictureUrl
         )
 
+        assertEquals(
+            listOf(
+                16L, // Herve
+                18L, // Eric - phone #2
+                29L, // Eric - phone #1
+                19L, // Louis
+                23L, // Mathis
+                39L, // Maison H
+                47L, // MTN Retail Account #1
+            ),
+            tenant.testUserIds
+        )
+        assertEquals(
+            listOf(
+                "+237670000001", // MTN Test Account #1
+                "+237670000002", // MTN Test Account #2
+                "+237670000011", // MTN Retail Account #1
+                "+237690000001", // OM Test Account #1 - Maison H (business account)
+                "+237690000002", // OM Test Account #2
+            ),
+            tenant.testPhoneNumbers
+        )
+
         assertEquals(15, tenant.toggles.size)
         assertEquals(
             ToggleName.values().map { it.name },

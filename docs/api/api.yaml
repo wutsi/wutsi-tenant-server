@@ -279,6 +279,15 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Toggle"
+        testUserIds:
+          type: array
+          items:
+            type: integer
+            format: int64
+        testPhoneNumbers:
+          type: array
+          items:
+            type: string
 
     Toggle:
       type: object
