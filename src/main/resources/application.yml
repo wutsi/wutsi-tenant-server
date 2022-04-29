@@ -93,11 +93,6 @@ wutsi:
       description: Enable support for international shipping
       environment: [ 'test' ]
 
-    - name: SMS
-      description: Enable SMS Delivery
-    - name: SMS_VERIFICATION
-      description: Enable SMS Verification
-
     - name: STORE
       description: Enable Store Module
     - name: STORE_DIGITAL_PRODUCT

@@ -234,7 +234,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
             tenant.testPhoneNumbers
         )
 
-        assertEquals(15, tenant.toggles.size)
+        assertEquals(13, tenant.toggles.size)
         assertEquals(
             ToggleName.values().map { it.name },
             tenant.toggles.map { it.name }
