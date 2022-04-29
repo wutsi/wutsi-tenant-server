@@ -89,6 +89,7 @@ wutsi:
 
     - name: SHIPPING
       description: Enable Shipping Module
+      environment: [ 'test' ]
     - name: SHIPPING_INTERNATIONAL
       description: Enable support for international shipping
       environment: [ 'test' ]
@@ -97,6 +98,7 @@ wutsi:
       description: Enable Store Module
     - name: STORE_DIGITAL_PRODUCT
       description: Enable support for digital product
+      environment: [ 'test' ]
 
     - name: SWITCH_ENVIRONMENT
       description: Enable the ability to switch from PROD to TEST environment
