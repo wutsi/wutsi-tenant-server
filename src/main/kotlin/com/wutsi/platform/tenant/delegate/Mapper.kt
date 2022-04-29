@@ -25,36 +25,37 @@ fun TenantEntity.toTenantSummary() = TenantSummary(
     name = this.name,
 )
 
-fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>, toggles: List<ToggleEntity>, env: Environment) = Tenant(
-    id = this.id,
-    domainName = this.domainName,
-    supportEmail = this.supportEmail,
-    currency = this.currency,
-    installUrl = this.installUrl,
-    installAndroidUrl = this.installAndroidUrl,
-    installIOSUrl = this.installIOSUrl,
-    webappUrl = this.webappUrl,
-    name = this.name,
-    countries = this.countries,
-    languages = this.languages,
-    numberFormat = this.numberFormat,
-    monetaryFormat = this.monetaryFormat,
-    logos = this.logos.map { it.toLogo() },
-    mobileCarriers = this.mobileCarriers.map {
-        if (carriers.containsKey(it))
-            carriers[it]?.toMobileCarrier()
-        else
-            null
-    }.filterNotNull(),
-    limits = this.limits.toLimits(),
-    currencySymbol = this.currencySymbol,
-    dateFormat = this.dateFormat,
-    timeFormat = this.timeFormat,
-    dateTimeFormat = this.dateTimeFormat,
-    fees = this.fees.map { it.toFee() },
-    product = this.product.toProduct(),
-    toggles = toggles.filter { it.isEnabled(this, env ) }.map { it.toToggle() }
-)
+fun TenantEntity.toTenant(carriers: Map<String, MobileCarrierEntity>, toggles: List<ToggleEntity>, env: Environment) =
+    Tenant(
+        id = this.id,
+        domainName = this.domainName,
+        supportEmail = this.supportEmail,
+        currency = this.currency,
+        installUrl = this.installUrl,
+        installAndroidUrl = this.installAndroidUrl,
+        installIOSUrl = this.installIOSUrl,
+        webappUrl = this.webappUrl,
+        name = this.name,
+        countries = this.countries,
+        languages = this.languages,
+        numberFormat = this.numberFormat,
+        monetaryFormat = this.monetaryFormat,
+        logos = this.logos.map { it.toLogo() },
+        mobileCarriers = this.mobileCarriers.map {
+            if (carriers.containsKey(it))
+                carriers[it]?.toMobileCarrier()
+            else
+                null
+        }.filterNotNull(),
+        limits = this.limits.toLimits(),
+        currencySymbol = this.currencySymbol,
+        dateFormat = this.dateFormat,
+        timeFormat = this.timeFormat,
+        dateTimeFormat = this.dateTimeFormat,
+        fees = this.fees.map { it.toFee() },
+        product = this.product.toProduct(),
+        toggles = toggles.filter { it.isEnabled(this, env) }.map { it.toToggle() }
+    )
 
 fun ToggleEntity.toToggle() = Toggle(
     name = this.name,

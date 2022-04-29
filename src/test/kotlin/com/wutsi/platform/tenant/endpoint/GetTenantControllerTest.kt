@@ -17,7 +17,7 @@ import kotlin.test.assertTrue
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class GetTenantControllerTest : AbstractSecuredController() {
     @LocalServerPort
-    public val port: Int = 0
+    val port: Int = 0
 
     private lateinit var rest: RestTemplate
 
@@ -211,12 +211,9 @@ class GetTenantControllerTest : AbstractSecuredController() {
             tenant.product.defaultPictureUrl
         )
 
-        assertEquals(2, tenant.toggles.size)
+        assertEquals(15, tenant.toggles.size)
         assertEquals(
-            listOf(
-                ToggleName.ACCOUNT.name,
-                ToggleName.CART.name
-            ),
+            ToggleName.values().map { it.name },
             tenant.toggles.map { it.name }
         )
     }

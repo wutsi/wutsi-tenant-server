@@ -62,9 +62,49 @@ wutsi:
   toggles:
     - name: ACCOUNT
       description: Enable accounts management
+      environment: [ 'test' ]
+    - name: ACCOUNT_BANK
+      description: Enable support for bank accounts
+      environment: [ 'test' ]
+    - name: ACCOUNT_MOBILE_MONEY
+      description: Enable support for mobile money
+      environment: [ 'test' ]
+
     - name: CART
       description: Enable shopping cart
-      environment: ['test']
+      environment: [ 'test' ]
+
+    - name: ORDER
+      description: Enable Order Management
+      environment: [ 'test' ]
+
+    - name: PAYMENT
+      description: Enable Payment Module
+
+    - name: SCAN
+      description: Enable QR Code Scanning Module
+
+    - name: SEND
+      description: Enable Money Transfer Module
+
+    - name: SHIPPING
+      description: Enable Shipping Module
+    - name: SHIPPING_INTERNATIONAL
+      description: Enable support for international shipping
+      environment: [ 'test' ]
+
+    - name: SMS
+      description: Enable SMS Delivery
+    - name: SMS_VERIFICATION
+      description: Enable SMS Verification
+
+    - name: STORE
+      description: Enable Store Module
+    - name: STORE_DIGITAL_PRODUCT
+      description: Enable support for digital product
+
+    - name: SWITCH_ENVIRONMENT
+      description: Enable the ability to switch from PROD to TEST environment
 
   tenants:
     - id: 1
