@@ -98,7 +98,6 @@ wutsi:
       description: Enable Store Module
     - name: STORE_DIGITAL_PRODUCT
       description: Enable support for digital product
-      environment: [ 'test' ]
 
     - name: SWITCH_ENVIRONMENT
       description: Enable the ability to switch from PROD to TEST environment
