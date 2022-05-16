@@ -233,11 +233,13 @@ class GetTenantControllerTest : AbstractSecuredController() {
             tenant.testPhoneNumbers
         )
 
-        assertEquals(6, tenant.toggles.size)
         assertEquals(
             listOf(
+                "ACCOUNT",
+                "ACCOUNT_MOBILE_MONEY",
                 "CART",
                 "ORDER",
+                "PAYMENT",
                 "SCAN",
                 "SHIPPING",
                 "STORE",
