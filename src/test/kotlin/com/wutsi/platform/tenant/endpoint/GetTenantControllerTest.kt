@@ -1,7 +1,6 @@
 package com.wutsi.platform.tenant.endpoint
 
 import com.wutsi.platform.tenant.dto.GetTenantResponse
-import com.wutsi.platform.tenant.entity.ToggleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -234,9 +233,16 @@ class GetTenantControllerTest : AbstractSecuredController() {
             tenant.testPhoneNumbers
         )
 
-        assertEquals(13, tenant.toggles.size)
+        assertEquals(6, tenant.toggles.size)
         assertEquals(
-            ToggleName.values().map { it.name },
+            listOf(
+                "CART",
+                "ORDER",
+                "SCAN",
+                "SHIPPING",
+                "STORE",
+                "SWITCH_ENVIRONMENT"
+            ),
             tenant.toggles.map { it.name }
         )
     }
