@@ -241,7 +241,6 @@ class GetTenantControllerTest : AbstractSecuredController() {
                 "ORDER",
                 "PAYMENT",
                 "SCAN",
-                "SHIPPING",
                 "STORE",
                 "SWITCH_ENVIRONMENT"
             ),
