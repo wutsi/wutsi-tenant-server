@@ -77,6 +77,9 @@ wutsi:
     - name: ORDER
       enabled: true
       description: Enable Order Management
+    - name: ORDER_PAYMENT
+      enabled: false
+      description: Enable Payments on Orders
 
     - name: PAYMENT
       enabled: true
