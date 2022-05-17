@@ -91,7 +91,7 @@ wutsi:
       description: Enable Money Transfer Module
 
     - name: SHIPPING
-      enabled: true
+      enabled: false
       description: Enable Shipping Module
     - name: SHIPPING_INTERNATIONAL
       enabled: false
