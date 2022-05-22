@@ -5,6 +5,7 @@ enum class ToggleName {
     ACCOUNT_BANK,
     ACCOUNT_MOBILE_MONEY,
     CART,
+    CONTACT,
     ORDER,
     ORDER_PAYMENT,
     PAYMENT,

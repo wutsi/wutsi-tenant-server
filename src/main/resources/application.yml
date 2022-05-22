@@ -61,28 +61,35 @@ wutsi:
 
   toggles:
     - name: ACCOUNT
-      enabled: true
+      enabled: false
       description: Enable accounts management
+
     - name: ACCOUNT_BANK
       enabled: false
       description: Enable support for bank accounts
+
     - name: ACCOUNT_MOBILE_MONEY
-      enabled: true
+      enabled: false
       description: Enable support for mobile money
 
     - name: CART
       enabled: true
       description: Enable shopping cart
 
+    - name: CONTACT
+      enabled: false
+      description: Enable the contact module
+
     - name: ORDER
       enabled: true
       description: Enable Order Management
+
     - name: ORDER_PAYMENT
       enabled: false
       description: Enable Payments on Orders
 
     - name: PAYMENT
-      enabled: true
+      enabled: false
       description: Enable Payment Module
 
     - name: SCAN

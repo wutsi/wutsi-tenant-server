@@ -235,11 +235,8 @@ class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(
             listOf(
-                "ACCOUNT",
-                "ACCOUNT_MOBILE_MONEY",
                 "CART",
                 "ORDER",
-                "PAYMENT",
                 "SCAN",
                 "STORE",
                 "SWITCH_ENVIRONMENT"
