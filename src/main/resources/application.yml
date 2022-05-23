@@ -118,6 +118,10 @@ wutsi:
       enabled: false
       description: Enable support for international shipping
 
+    - name: SHIPPING_EMAIL_DELIVERY
+      enabled: false
+      description: Enable support for email delivery
+
     - name: STORE
       enabled: true
       description: Enable Store Module
