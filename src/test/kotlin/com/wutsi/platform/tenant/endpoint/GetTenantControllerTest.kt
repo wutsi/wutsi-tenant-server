@@ -238,8 +238,10 @@ class GetTenantControllerTest : AbstractSecuredController() {
                 "CART",
                 "ORDER",
                 "SCAN",
+                "SHIPPING",
+                "SHIPPING_LOCAL_PICKUP",
                 "STORE",
-                "SWITCH_ENVIRONMENT"
+                "SWITCH_ENVIRONMENT",
             ),
             tenant.toggles.map { it.name }
         )

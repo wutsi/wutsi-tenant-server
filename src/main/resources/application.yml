@@ -101,9 +101,20 @@ wutsi:
       description: Enable Money Transfer Module
 
     - name: SHIPPING
-      enabled: false
+      enabled: true
       description: Enable Shipping Module
-    - name: SHIPPING_INTERNATIONAL
+      environements: [ 'test' ]
+
+    - name: SHIPPING_LOCAL_PICKUP
+      enabled: true
+      description: Enable Local pickup shipping
+      environements: [ 'test' ]
+
+    - name: SHIPPING_LOCAL_DELIVERY
+      enabled: false
+      description: Enable Local pickup shipping
+
+    - name: SHIPPING_INTERNATIONAL_DELIVERY
       enabled: false
       description: Enable support for international shipping
 
