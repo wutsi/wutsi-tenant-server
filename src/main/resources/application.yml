@@ -105,10 +105,14 @@ wutsi:
       description: Enable Shipping Module
       environements: [ 'test' ]
 
-    - name: SHIPPING_LOCAL_PICKUP
+    - name: SHIPPING_IN_STORE_PICKUP
       enabled: true
-      description: Enable Local pickup shipping
+      description: Enable in-store pickup shipping
       environements: [ 'test' ]
+
+    - name: SHIPPING_LOCAL_PICKUP
+      enabled: false
+      description: Enable Local pickup shipping
 
     - name: SHIPPING_LOCAL_DELIVERY
       enabled: false
