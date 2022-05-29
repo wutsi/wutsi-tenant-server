@@ -103,12 +103,10 @@ wutsi:
     - name: SHIPPING
       enabled: true
       description: Enable Shipping Module
-      environements: [ 'test' ]
 
     - name: SHIPPING_IN_STORE_PICKUP
       enabled: true
       description: Enable in-store pickup shipping
-      environements: [ 'test' ]
 
     - name: SHIPPING_LOCAL_PICKUP
       enabled: false
