@@ -166,16 +166,17 @@ class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals(
             listOf(
-//                "ACCOUNT",
-//                "ACCOUNT_MOBILE_MONEY",
-//                "CASHOUT",
+                "ACCOUNT",
+                "ACCOUNT_MOBILE_MONEY",
+                "CASHOUT",
                 "CART",
                 "ORDER",
-//                "ORDER_PAYMENT",
+                "ORDER_PAYMENT",
                 "SCAN",
                 "SHIPPING",
                 "SHIPPING_IN_STORE_PICKUP",
                 "STORE",
+                "TRANSACTION_HISTORY",
                 "SWITCH_ENVIRONMENT",
             ),
             tenant.toggles.map { it.name }
