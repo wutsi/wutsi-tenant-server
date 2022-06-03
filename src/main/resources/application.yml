@@ -63,6 +63,7 @@ wutsi:
     - name: ACCOUNT
       enabled: true
       description: Enable accounts management
+      environments: [ 'test' ]
 
     - name: ACCOUNT_BANK
       enabled: false
@@ -71,6 +72,7 @@ wutsi:
     - name: ACCOUNT_MOBILE_MONEY
       enabled: true
       description: Enable support for mobile money
+      environments: [ 'test' ]
 
     - name: CASHIN
       enabled: false
@@ -79,6 +81,7 @@ wutsi:
     - name: CASHOUT
       enabled: true
       description: Enable cash-out
+      environments: [ 'test' ]
 
     - name: CART
       enabled: true
@@ -95,6 +98,7 @@ wutsi:
     - name: ORDER_PAYMENT
       enabled: true
       description: Enable Payments on Orders
+      environments: [ 'test' ]
 
     - name: PAYMENT
       enabled: false
