@@ -95,7 +95,6 @@ wutsi:
     - name: ORDER_PAYMENT
       enabled: true
       description: Enable Payments on Orders
-      environments: [ 'test' ]
 
     - name: PAYMENT
       enabled: false

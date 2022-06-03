@@ -171,6 +171,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
                 "CASHOUT",
                 "CART",
                 "ORDER",
+                "ORDER_PAYMENT",
                 "SCAN",
                 "SHIPPING",
                 "SHIPPING_IN_STORE_PICKUP",
