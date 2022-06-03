@@ -61,7 +61,7 @@ wutsi:
 
   toggles:
     - name: ACCOUNT
-      enabled: false
+      enabled: true
       description: Enable accounts management
 
     - name: ACCOUNT_BANK
@@ -69,7 +69,7 @@ wutsi:
       description: Enable support for bank accounts
 
     - name: ACCOUNT_MOBILE_MONEY
-      enabled: false
+      enabled: true
       description: Enable support for mobile money
 
     - name: CART
