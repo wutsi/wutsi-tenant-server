@@ -145,6 +145,11 @@ wutsi:
       description: Enable support for digital product
       environments: [ 'test' ]
 
+    - name: TRANSACTION_HISTORY
+      enabled: true
+      description: Display transaction history?
+      environments: [ 'test' ]
+
     - name: SWITCH_ENVIRONMENT
       enabled: true
       description: Enable the ability to switch from PROD to TEST environment
