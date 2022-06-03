@@ -168,6 +168,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
             listOf(
                 "ACCOUNT",
                 "ACCOUNT_MOBILE_MONEY",
+                "CASHOUT",
                 "CART",
                 "ORDER",
                 "SCAN",

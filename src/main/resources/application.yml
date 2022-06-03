@@ -72,6 +72,14 @@ wutsi:
       enabled: true
       description: Enable support for mobile money
 
+    - name: CASHIN
+      enabled: false
+      description: Enable cash-in
+
+    - name: CASHOUT
+      enabled: true
+      description: Enable cash-out
+
     - name: CART
       enabled: true
       description: Enable shopping cart
