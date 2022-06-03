@@ -9,9 +9,7 @@ import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import kotlin.test.assertEquals
-import kotlin.test.assertFalse
 import kotlin.test.assertNull
-import kotlin.test.assertTrue
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class GetTenantControllerTest : AbstractSecuredController() {
@@ -133,77 +131,10 @@ class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertEquals(8, tenant.fees.size)
-        assertEquals("transfer", tenant.fees[0].transactionType)
-        assertTrue(tenant.fees[0].applyToSender)
-        assertNull(tenant.fees[0].fromRetail)
-        assertNull(tenant.fees[0].toRetail)
-        assertNull(tenant.fees[0].toBusiness)
-        assertEquals(5000.0, tenant.fees[0].threshold)
-        assertEquals(100.0, tenant.fees[0].amount)
-        assertEquals(0.0, tenant.fees[0].percent)
-
-        assertEquals("transfer", tenant.fees[1].transactionType)
-        assertFalse(tenant.fees[1].applyToSender)
-        assertEquals(true, tenant.fees[1].fromRetail)
-        assertNull(tenant.fees[1].toRetail)
-        assertNull(tenant.fees[1].toBusiness)
-        assertEquals(0.0, tenant.fees[1].threshold)
-        assertEquals(0.0, tenant.fees[1].amount)
-        assertEquals(0.0, tenant.fees[1].percent)
-
-        assertEquals("transfer", tenant.fees[2].transactionType)
-        assertTrue(tenant.fees[2].applyToSender)
-        assertNull(tenant.fees[2].fromRetail)
-        assertEquals(true, tenant.fees[2].toRetail)
-        assertNull(tenant.fees[2].toBusiness)
-        assertEquals(0.0, tenant.fees[2].threshold)
-        assertEquals(0.0, tenant.fees[2].amount)
-        assertEquals(0.02, tenant.fees[2].percent)
-
-        assertEquals("transfer", tenant.fees[3].transactionType)
-        assertFalse(tenant.fees[3].applyToSender)
-        assertNull(tenant.fees[3].fromRetail)
-        assertNull(tenant.fees[3].toRetail)
-        assertEquals(true, tenant.fees[3].toBusiness)
-        assertEquals(0.0, tenant.fees[3].threshold)
-        assertEquals(0.0, tenant.fees[3].amount)
-        assertEquals(0.05, tenant.fees[3].percent)
-
-        assertEquals("cashout", tenant.fees[4].transactionType)
-        assertTrue(tenant.fees[4].applyToSender)
-        assertNull(tenant.fees[4].fromRetail)
-        assertNull(tenant.fees[4].toRetail)
-        assertEquals(0.0, tenant.fees[4].threshold)
-        assertEquals(0.0, tenant.fees[4].amount)
-        assertEquals(0.01, tenant.fees[4].percent)
-
-        assertEquals("payment", tenant.fees[5].transactionType)
-        assertFalse(tenant.fees[5].applyToSender)
-        assertNull(tenant.fees[5].fromRetail)
-        assertNull(tenant.fees[5].toRetail)
-        assertNull(tenant.fees[5].toBusiness)
-        assertEquals(0.0, tenant.fees[5].threshold)
-        assertEquals(0.0, tenant.fees[5].amount)
-        assertEquals(0.05, tenant.fees[5].percent)
-
-        assertEquals("payment", tenant.fees[6].transactionType)
-        assertFalse(tenant.fees[6].applyToSender)
-        assertNull(tenant.fees[6].fromRetail)
-        assertNull(tenant.fees[6].toRetail)
-        assertEquals(true, tenant.fees[6].toBusiness)
-        assertEquals(0.0, tenant.fees[6].threshold)
-        assertEquals(0.0, tenant.fees[6].amount)
-        assertEquals(0.05, tenant.fees[6].percent)
-
-        assertEquals("cashin", tenant.fees[7].transactionType)
-        assertTrue(tenant.fees[7].applyToSender)
-        assertNull(tenant.fees[7].fromRetail)
-        assertNull(tenant.fees[7].toRetail)
-        assertNull(tenant.fees[7].toBusiness)
-        assertEquals(0.0, tenant.fees[7].threshold)
-        assertEquals(0.0, tenant.fees[7].amount)
-        assertEquals(0.0, tenant.fees[7].percent)
+        assertEquals(1, tenant.fees.size)
+        assertEquals("CHARGE", tenant.fees[0].transactionType)
+        assertEquals(0.0, tenant.fees[0].amount)
+        assertEquals(0.1, tenant.fees[0].percent)
 
         assertEquals(
             "http://localhost:0/static/wutsi-tenant-server/products/nopicture.png",

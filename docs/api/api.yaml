@@ -134,27 +134,11 @@ components:
         transactionType:
           type: string
           enum:
-            - cashin
-            - cashout
-            - transfer
-            - payment
+            - CASHIN
+            - CASHOUT
+            - TRANSFER
+            - CHARGE
           description: Type of transaction
-        fromRetail:
-          type: boolean
-          description: Transaction from retailler?
-          nullable: true
-        toRetail:
-          type: boolean
-          description: Transaction to retailler?
-          nullable: true
-        toBusiness:
-          type: boolean
-          description: Transaction to a business?
-          nullable: true
-        threshold:
-          type: number
-          format: double
-          description: Fees threshold
         amount:
           type: number
           format: double
@@ -163,9 +147,6 @@ components:
           type: number
           format: double
           description: Fees percentage
-        applyToSender:
-          type: boolean
-          description: Apply to fees to the sender
 
     Product:
       type: object
