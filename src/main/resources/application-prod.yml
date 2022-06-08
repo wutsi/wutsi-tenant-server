@@ -42,7 +42,7 @@ wutsi:
         - orange
       limits:
         min-cashin: 500
-        min-cashout: 500
+        min-cashout: 5000
       fees:
         - transaction-type: CHARGE  # 10% fees on charges
           percent: 0.1
@@ -53,47 +53,3 @@ wutsi:
         - 2  # Louis
         - 5  # Patrick
         - 7  # Eric
-
-  mobile-carriers:
-    - code: mtn
-      name: MTN
-      countries:
-        - CM
-      phone-prefixes:
-        CM:
-          - "+23767"
-          - "+237650"
-          - "+237651"
-          - "+237652"
-          - "+237653"
-          - "+237654"
-          - "+237675"
-          - "+237676"
-          - "+237677"
-          - "+237678"
-          - "+237679"
-          - "+237680"
-          - "+237681"
-      logos:
-        - type: PICTORIAL
-          url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/pictorial.png"
-        - type: WORDMARK
-          url: "${wutsi.application.asset-root-url}/mobile-carriers/mtn/logos/wordmark.png"
-
-    - code: orange
-      name: Orange
-      countries:
-        - CM
-      phone-prefixes:
-        CM:
-          - "+23769"
-          - "+237655"
-          - "+237656"
-          - "+237657"
-          - "+237658"
-          - "+237659"
-      logos:
-        - type: PICTORIAL
-          url: "${wutsi.application.asset-root-url}/mobile-carriers/orange/logos/pictorial.png"
-        - type: WORDMARK
-          url: "${wutsi.application.asset-root-url}/mobile-carriers/orange/logos/wordmark.png"

@@ -73,7 +73,7 @@ wutsi:
       description: Enable support for mobile money
 
     - name: CASHIN
-      enabled: false
+      enabled: true
       description: Enable cash-in
 
     - name: CASHOUT
@@ -85,7 +85,7 @@ wutsi:
       description: Enable shopping cart
 
     - name: CONTACT
-      enabled: false
+      enabled: true
       description: Enable the contact module
 
     - name: ORDER
@@ -105,7 +105,7 @@ wutsi:
       description: Enable QR Code Scanning Module
 
     - name: SEND
-      enabled: false
+      enabled: true
       description: Enable Money Transfer Module
 
     - name: SHIPPING
@@ -184,8 +184,9 @@ wutsi:
         min-cashin: 500
         min-cashout: 500
       fees:
-        - transaction-type: CHARGE  # 10% fees on charges
-          percent: 0.1
+        - transaction-type: CHARGE  # 10% fees on charges - applied to merchant
+          percent: 0.10
+
       product:
         default-picture-url: "${wutsi.application.asset-root-url}/products/nopicture.png"
       test-user-ids:
