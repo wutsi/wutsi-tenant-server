@@ -188,11 +188,11 @@ wutsi:
           percent: 0.10
           applyToSender: false
         - transaction-type: CASHIN  # 2.5% fees on cashin with mobile money - applied to sender
-          payment-method-type: MOBILE_MONEY
+          payment-method-type: MOBILE
           percent: 0.025
           applyToSender: true
         - transaction-type: CASHOUT  # 2.0% fees on cashout with mobile money - applied to sender
-          payment-method-type: MOBILE_MONEY
+          payment-method-type: MOBILE
           percent: 0.020
           applyToSender: true
 

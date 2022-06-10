@@ -4,14 +4,14 @@ import com.wutsi.platform.tenant.dto.ListTenantResponse
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.web.server.LocalServerPort
+import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.web.client.RestTemplate
 import kotlin.test.assertEquals
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ListTenantsControllerTest : AbstractSecuredController() {
+class ListTenantsControllerTest : AbstractSecuredController() {
     @LocalServerPort
-    public val port: Int = 0
+    val port: Int = 0
 
     private lateinit var rest: RestTemplate
 

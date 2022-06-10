@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.web.server.LocalServerPort
+import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import kotlin.test.assertEquals
@@ -142,13 +142,13 @@ class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals(0.0, tenant.fees[1].amount)
         assertEquals(0.025, tenant.fees[1].percent)
         assertEquals(true, tenant.fees[1].applyToSender)
-        assertEquals("MOBILE_MONEY", tenant.fees[1].paymentMethodType)
+        assertEquals("MOBILE", tenant.fees[1].paymentMethodType)
 
         assertEquals("CASHOUT", tenant.fees[2].transactionType)
         assertEquals(0.0, tenant.fees[2].amount)
         assertEquals(0.020, tenant.fees[2].percent)
         assertEquals(true, tenant.fees[2].applyToSender)
-        assertEquals("MOBILE_MONEY", tenant.fees[2].paymentMethodType)
+        assertEquals("MOBILE", tenant.fees[2].paymentMethodType)
 
         assertEquals(
             "http://localhost:0/static/wutsi-tenant-server/products/nopicture.png",
