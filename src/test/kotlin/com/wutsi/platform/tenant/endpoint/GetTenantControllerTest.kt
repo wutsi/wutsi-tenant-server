@@ -131,10 +131,24 @@ class GetTenantControllerTest : AbstractSecuredController() {
         assertEquals("CA", carriers[1].phonePrefixes[2].country)
         assertEquals(listOf("+1"), carriers[1].phonePrefixes[2].prefixes)
 
-        assertEquals(1, tenant.fees.size)
+        assertEquals(3, tenant.fees.size)
         assertEquals("CHARGE", tenant.fees[0].transactionType)
         assertEquals(0.0, tenant.fees[0].amount)
         assertEquals(0.1, tenant.fees[0].percent)
+        assertEquals(false, tenant.fees[0].applyToSender)
+        assertNull(tenant.fees[0].paymentMethodType)
+
+        assertEquals("CASHIN", tenant.fees[1].transactionType)
+        assertEquals(0.0, tenant.fees[1].amount)
+        assertEquals(0.025, tenant.fees[1].percent)
+        assertEquals(true, tenant.fees[1].applyToSender)
+        assertEquals("MOBILE_MONEY", tenant.fees[1].paymentMethodType)
+
+        assertEquals("CASHOUT", tenant.fees[2].transactionType)
+        assertEquals(0.0, tenant.fees[2].amount)
+        assertEquals(0.020, tenant.fees[2].percent)
+        assertEquals(true, tenant.fees[2].applyToSender)
+        assertEquals("MOBILE_MONEY", tenant.fees[2].paymentMethodType)
 
         assertEquals(
             "http://localhost:0/static/wutsi-tenant-server/products/nopicture.png",

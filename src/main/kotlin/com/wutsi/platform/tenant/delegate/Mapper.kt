@@ -90,6 +90,8 @@ fun FeeEntity.toFee() = Fee(
     transactionType = this.transactionType,
     percent = this.percent,
     amount = this.amount,
+    applyToSender = this.applyToSender,
+    paymentMethodType = this.paymentMethodType
 )
 
 fun ProductEntity.toProduct() = Product(

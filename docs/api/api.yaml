@@ -147,6 +147,14 @@ components:
           type: number
           format: double
           description: Fees percentage
+        applyToSender:
+          type: boolean
+          default: false
+          description: Apply the fees to the sender
+        paymentMethodType:
+          type: string
+          nullable: true
+          description: Type of payment method
 
     Product:
       type: object
