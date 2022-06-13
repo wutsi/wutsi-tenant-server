@@ -164,6 +164,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
                 23L, // Mathis
                 39L, // Maison H
                 47L, // MTN Retail Account #1
+                86L, // Nadine
             ),
             tenant.testUserIds
         )
