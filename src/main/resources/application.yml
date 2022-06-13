@@ -121,8 +121,9 @@ wutsi:
       description: Enable Local pickup shipping
 
     - name: SHIPPING_LOCAL_DELIVERY
-      enabled: false
-      description: Enable Local pickup shipping
+      enabled: true
+      description: Enable deliveries in the same city
+      environments: [ 'test' ]
 
     - name: SHIPPING_INTERNATIONAL_DELIVERY
       enabled: false
