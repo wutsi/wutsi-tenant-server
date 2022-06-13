@@ -140,7 +140,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
 
         assertEquals("CASHIN", tenant.fees[1].transactionType)
         assertEquals(0.0, tenant.fees[1].amount)
-        assertEquals(0.025, tenant.fees[1].percent)
+        assertEquals(0.0, tenant.fees[1].percent)
         assertEquals(true, tenant.fees[1].applyToSender)
         assertEquals("MOBILE", tenant.fees[1].paymentMethodType)
 
