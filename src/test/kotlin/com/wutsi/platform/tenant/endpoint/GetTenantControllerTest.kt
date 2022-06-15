@@ -193,6 +193,7 @@ class GetTenantControllerTest : AbstractSecuredController() {
                 "SEND",
                 "SHIPPING",
                 "SHIPPING_IN_STORE_PICKUP",
+                "SHIPPING_LOCAL_DELIVERY",
                 "STORE",
                 "TRANSACTION_HISTORY",
                 "SWITCH_ENVIRONMENT",

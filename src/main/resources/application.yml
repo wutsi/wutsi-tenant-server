@@ -123,7 +123,6 @@ wutsi:
     - name: SHIPPING_LOCAL_DELIVERY
       enabled: true
       description: Enable deliveries in the same city
-      environments: [ 'test' ]
 
     - name: SHIPPING_INTERNATIONAL_DELIVERY
       enabled: false
