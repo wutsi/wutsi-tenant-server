@@ -129,8 +129,9 @@ wutsi:
       description: Enable support for international shipping
 
     - name: SHIPPING_EMAIL_DELIVERY
-      enabled: false
+      enabled: true
       description: Enable support for email delivery
+      environments: [ 'test' ]
 
     - name: STORE
       enabled: true
