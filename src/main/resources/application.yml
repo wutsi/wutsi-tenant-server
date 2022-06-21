@@ -112,6 +112,10 @@ wutsi:
       enabled: true
       description: Enable Shipping Module
 
+    - name: SHIPPING_EMAIL_DELIVERY
+      enabled: true
+      description: Enable support for email delivery
+
     - name: SHIPPING_IN_STORE_PICKUP
       enabled: true
       description: Enable in-store pickup shipping
@@ -128,11 +132,6 @@ wutsi:
       enabled: false
       description: Enable support for international shipping
 
-    - name: SHIPPING_EMAIL_DELIVERY
-      enabled: true
-      description: Enable support for email delivery
-      environments: [ 'test' ]
-
     - name: STORE
       enabled: true
       description: Enable Store Module
@@ -140,7 +139,6 @@ wutsi:
     - name: STORE_DIGITAL_PRODUCT
       enabled: true
       description: Enable support for digital product
-      environments: [ 'test' ]
 
     - name: TRANSACTION_HISTORY
       enabled: true
