@@ -8,7 +8,7 @@ import org.springframework.web.bind.`annotation`.RestController
 
 @RestController
 public class ListTenantsController(
-    private val `delegate`: ListTenantsDelegate
+    public val `delegate`: ListTenantsDelegate,
 ) {
     @GetMapping("/v1/tenants")
     @PreAuthorize(value = "hasAuthority('tenant-read')")

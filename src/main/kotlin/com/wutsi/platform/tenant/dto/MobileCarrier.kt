@@ -8,5 +8,5 @@ public data class MobileCarrier(
     public val name: String = "",
     public val countries: List<String> = emptyList(),
     public val logos: List<Logo> = emptyList(),
-    public val phonePrefixes: List<PhonePrefix> = emptyList()
+    public val phonePrefixes: List<PhonePrefix> = emptyList(),
 )

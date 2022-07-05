@@ -4,5 +4,5 @@ import kotlin.String
 
 public data class Logo(
     public val type: String = "",
-    public val url: String = ""
+    public val url: String = "",
 )

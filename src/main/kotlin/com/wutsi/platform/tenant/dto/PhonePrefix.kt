@@ -5,5 +5,5 @@ import kotlin.collections.List
 
 public data class PhonePrefix(
     public val country: String = "",
-    public val prefixes: List<String> = emptyList()
+    public val prefixes: List<String> = emptyList(),
 )

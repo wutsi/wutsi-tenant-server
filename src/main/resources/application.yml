@@ -88,6 +88,11 @@ wutsi:
       enabled: true
       description: Enable the contact module
 
+    - name: NEWS
+      enabled: true
+      description: Enable News Module
+      environments: [ 'test' ]
+
     - name: ORDER
       enabled: true
       description: Enable Order Management

@@ -9,5 +9,5 @@ public data class Fee(
     public val amount: Double = 0.0,
     public val percent: Double = 0.0,
     public val applyToSender: Boolean = false,
-    public val paymentMethodType: String? = null
+    public val paymentMethodType: String? = null,
 )

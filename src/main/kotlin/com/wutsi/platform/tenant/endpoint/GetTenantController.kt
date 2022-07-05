@@ -10,7 +10,7 @@ import kotlin.Long
 
 @RestController
 public class GetTenantController(
-    private val `delegate`: GetTenantDelegate
+    public val `delegate`: GetTenantDelegate,
 ) {
     @GetMapping("/v1/tenants/{id}")
     @PreAuthorize(value = "hasAuthority('tenant-read')")

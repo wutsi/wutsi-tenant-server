@@ -8,6 +8,7 @@ enum class ToggleName {
     CASHOUT,
     CART,
     CONTACT,
+    NEWS,
     ORDER,
     ORDER_PAYMENT,
     PAYMENT,

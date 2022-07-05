@@ -8,5 +8,5 @@ public data class Toggle(
     public val name: String = "",
     public val description: String? = null,
     public val environments: List<String> = emptyList(),
-    public val tenantIds: List<Long> = emptyList()
+    public val tenantIds: List<Long> = emptyList(),
 )

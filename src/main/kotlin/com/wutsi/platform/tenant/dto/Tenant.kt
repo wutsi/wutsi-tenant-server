@@ -29,5 +29,5 @@ public data class Tenant(
     public val product: Product = Product(),
     public val toggles: List<Toggle> = emptyList(),
     public val testUserIds: List<Long> = emptyList(),
-    public val testPhoneNumbers: List<String> = emptyList()
+    public val testPhoneNumbers: List<String> = emptyList(),
 )
