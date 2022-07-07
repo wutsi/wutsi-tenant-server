@@ -172,9 +172,13 @@ class GetTenantControllerTest : AbstractSecuredController() {
             listOf(
                 "+237670000001", // MTN Test Account #1
                 "+237670000002", // MTN Test Account #2
-                "+237670000011", // MTN Retail Account #1
+                "+237670000010", // MTN Test Account #3
+                "+237670000011", // MTN Test Account #4
+                "+237670000012", // MTN Test Account #5
                 "+237690000001", // OM Test Account #1 - Maison H (business account)
                 "+237690000002", // OM Test Account #2
+                "+237690000010", // OM Test Account #3
+                "+237690000011", // OM Test Account #4
             ),
             tenant.testPhoneNumbers
         )
