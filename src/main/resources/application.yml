@@ -117,7 +117,7 @@ wutsi:
       description: Enable Shipping Module
 
     - name: SHIPPING_EMAIL_DELIVERY
-      enabled: true
+      enabled: false
       description: Enable support for email delivery
 
     - name: SHIPPING_IN_STORE_PICKUP
