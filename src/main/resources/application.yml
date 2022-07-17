@@ -141,7 +141,7 @@ wutsi:
       description: Enable Store Module
 
     - name: STORE_DIGITAL_PRODUCT
-      enabled: true
+      enabled: false
       description: Enable support for digital product
 
     - name: TRANSACTION_HISTORY
